@@ -927,7 +927,7 @@ small {
   margin-top: 60px;
   position: relative; }
   .stages:before {
-    border-top: 4px solid #eb008b;
+    border-top: 4px solid #dd5aa0;
     content: "";
     width: 98%;
     display: inline-block;
@@ -950,8 +950,8 @@ small {
       float: right; }
 
 a.nav_stage {
-  background: white;
-  border: 3px solid #eb008b;
+  background: #eaeaea;
+  border: 3px solid #dd5aa0;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -974,6 +974,8 @@ a.nav_stage {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease; }
   a.nav_stage:hover, a.nav_stage.current {
+    background: white;
+    border: 3px solid #eb008b;
     margin-top: 0;
     height: 50px;
     width: 50px; }
@@ -1002,12 +1004,19 @@ a.nav_stage {
     float: left;
     margin: 0 0 0 20px;
     height: 101px;
-    width: 101px; }
+    width: 101px;
+    -webkit-transition: background 0.3s ease;
+    -moz-transition: background 0.3s ease;
+    -ms-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
+    transition: background 0.3s ease; }
     .pasos .description p {
       font-family: 'Geomanist', Helvetica, Arial, sans-serif;
       font-size: 13px;
       padding-top: 25px;
       text-align: center; }
+    .pasos .description:hover {
+      background: #fbb714; }
 
 .main_pic {
   background: #0cabb8;
