@@ -921,6 +921,109 @@ small {
   font-size: 18px;
   line-height: 1.5; }
 
+/* =stages  */
+.stages {
+  height: 50px;
+  margin-top: 60px;
+  position: relative; }
+  .stages:before {
+    border-top: 4px solid #eb008b;
+    content: "";
+    width: 98%;
+    display: inline-block;
+    position: absolute;
+    top: 21px;
+    z-index: 0; }
+  .stages li {
+    list-style: none;
+    display: inline-block;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 19.4%;
+    z-index: 1; }
+    .stages li:first-child a {
+      margin-left: 0; }
+    .stages li:last-child a {
+      margin-right: 0;
+      float: right; }
+
+a.nav_stage {
+  background: white;
+  border: 3px solid #eb008b;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  display: block;
+  margin: 5px auto 0;
+  height: 40px;
+  width: 40px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  a.nav_stage svg {
+    margin: 3px auto;
+    display: block;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  a.nav_stage:hover, a.nav_stage.current {
+    margin-top: 0;
+    height: 50px;
+    width: 50px; }
+    a.nav_stage:hover svg, a.nav_stage.current svg {
+      height: 35px;
+      width: 35px; }
+      a.nav_stage:hover svg path, a.nav_stage.current svg path {
+        fill: #eb008b; }
+
+.pasos {
+  margin-top: 40px; }
+  .pasos h2 {
+    font-family: 'Geomanist', Helvetica, Arial, sans-serif;
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center; }
+  .pasos .description {
+    background: white;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    float: left;
+    margin: 0 0 0 20px;
+    height: 101px;
+    width: 101px; }
+    .pasos .description p {
+      font-family: 'Geomanist', Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      padding-top: 25px;
+      text-align: center; }
+
+.main_pic {
+  background: #0cabb8;
+  border: 11px solid #0b9ba5;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  height: 260px;
+  width: 260px; }
+  .main_pic svg {
+    display: block;
+    margin: 30px auto; }
+
 /* =win 
 -------------------------------------------------------------- */
 .win h1 {
@@ -973,33 +1076,6 @@ small {
   display: inline-block;
   margin: 0 5px 0 0; }
 
-.stages {
-  height: 50px;
-  margin-top: 60px;
-  position: relative; }
-  .stages:before {
-    border-top: 4px solid #eb008b;
-    content: "";
-    width: 98%;
-    display: inline-block;
-    position: absolute;
-    top: 21px;
-    z-index: 0; }
-  .stages li {
-    list-style: none;
-    display: inline-block;
-    height: 50px;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    width: 19.4%;
-    z-index: 1; }
-    .stages li:first-child a {
-      margin-left: 0; }
-    .stages li:last-child a {
-      margin-right: 0;
-      float: right; }
-
 /* =BTN 
 -------------------------------------------------------------- */
 a.btn {
@@ -1022,40 +1098,6 @@ a.btn {
     display: block; }
   a.btn:hover {
     background: #1a1a1a; }
-
-a.nav_stage {
-  background: white;
-  border: 3px solid #eb008b;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-  display: block;
-  margin: 5px auto 0;
-  height: 40px;
-  width: 40px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
-  a.nav_stage svg {
-    margin: 3px auto;
-    display: block;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
-  a.nav_stage:hover, a.nav_stage.current {
-    margin-top: 0;
-    height: 50px;
-    width: 50px; }
-    a.nav_stage:hover svg, a.nav_stage.current svg {
-      height: 35px;
-      width: 35px; }
-      a.nav_stage:hover svg path, a.nav_stage.current svg path {
-        fill: #eb008b; }
 
 /* =FOOTER
 -------------------------------------------------------------- */
