@@ -19,8 +19,8 @@
 	<meta property="og:image" content="<?php echo $url;?>img/<?php echo !$og_image ? "cdmx_og.png" : $og_image ;?>"/>
 	<meta property="fb:app_id" content=""/>
 	
-	<link rel="stylesheet" href="/css/normalize.css">
-	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
 <!--
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::	
