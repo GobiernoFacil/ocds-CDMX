@@ -9,11 +9,15 @@
 require.config({
   baseUrl : "/js",
   paths : {
-    jquery     : "bower_components/jquery/dist/jquery.min",
-    backbone   : "bower_components/backbone/backbone",
-    underscore : "bower_components/underscore/underscore-min",
-    text       : "bower_components/requirejs-text/text",
-    scrollMagic : "bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min"
+    jquery      : "bower_components/jquery/dist/jquery.min",
+    backbone    : "bower_components/backbone/backbone",
+    underscore  : "bower_components/underscore/underscore-min",
+    text        : "bower_components/requirejs-text/text",
+    scrollMagic : "bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min",
+    timelineMax : "bower_components/gsap/src/minified/TimelineMax.min",
+    tweenLite   : "bower_components/gsap/src/minified/TweenLite.min",
+    tweenMax    : "bower_components/gsap/src/minified/TweenMax.min"
+
   },
   shim : {
     backbone : {
@@ -26,5 +30,5 @@ require.config({
  var app;
 
 require(['controller'], function(controller){ 
-  // app = new controller;
+  app = new controller;
 });

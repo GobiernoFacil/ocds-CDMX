@@ -11,9 +11,11 @@ define(function(require){
   // L O A D   T H E   A S S E T S   A N D   L I B R A R I E S
   // --------------------------------------------------------------------------------
   //
-  var Backbone      = require('backbone'),
-      ScrollMagic = require("scrollMagic");
- 
+  var Backbone    = require('backbone'),
+      ScrollMagic = require("scrollMagic"),
+      TweenLite   = require("tweenLite"),
+      TweenMax    = require("tweenMax"),
+      TimelineMax = require("timelineMax");
   //
   // D E F I N E   T H E   S E T U P   V A R I A B L E S
   // --------------------------------------------------------------------------------
@@ -32,9 +34,45 @@ define(function(require){
   // I N I T I A L I Z E   T H E   B A C K B O N E   " C O N T R O L L E R "
   // --------------------------------------------------------------------------------
   //
-  var controller = new ScrollMagic.Controller({
-            globalSceneOptions: {triggerHook: "onCenter"}
-        });
+
+  var controller =  Backbone.View.extend({
+    events : {
+      "click link_nav_planeacion"     : "show_planeacion",
+      "click link_nav_licitacion"     : "show_licitacion",
+      "click link_nav_adjudicacion"   : "show_adjudicacion",
+      "click link_nav_contratacion"   : "show_contratacion",
+      "click link_nav_implementacion" : "show_implementacion"
+    },
+    el : "body",
+    initialize : function(){
+      this.setupScroll();
+    },
+
+    setupScroll : function(){
+      var animation = new ScrollMagic.Controller(),
+          scene1    = new ScrollMagic.Scene({
+            triggerElement : ".etapas",
+            duration : 400
+          }).setPin(".etapas").addTo(animation);
+    },
+
+    //
+    show_planeacion : function(e){
+    },
+
+    show_licitacion : function(e){
+    },
+
+    show_adjudicacion : function(e){
+    },
+
+    show_contratacion : function(e){
+    },
+
+    show_implementacion : function(e){
+    }
+  });
+
     
 
   //
