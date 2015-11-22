@@ -53,7 +53,15 @@ define(function(require){
           scene1    = new ScrollMagic.Scene({
             triggerElement : ".etapas",
             duration : 400
-          }).setPin(".etapas").addTo(animation);
+          }).setPin(".etapas").addTo(animation),
+          scene2    = new ScrollMagic.Scene({
+            triggerElement : ".win",
+            duration : 400
+          }).setPin(".win").addTo(animation),
+          scene3    = new ScrollMagic.Scene({
+            triggerElement : ".tools",
+            duration : 400
+          }).setPin(".tools").addTo(animation);
     },
 
     //
