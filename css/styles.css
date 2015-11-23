@@ -994,6 +994,11 @@ a.nav_stage {
     margin-bottom: 30px;
     text-transform: uppercase;
     text-align: center; }
+    .pasos h2 b {
+      background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyNXB4IiBoZWlnaHQ9IjI1cHgiIHZpZXdCb3g9IjAgMCAyNSAyNSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjUgMjUiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwYXRoIGQ9Ik0xOC4zMjIsNy41NTFoMi44MjhjMC41MTYsMCwwLjkzNC0wLjQxOCwwLjkzNC0wLjkzNVYzLjc4OGMwLTAuNTE3LTAuNDE4LTAuOTM1LTAuOTM0LTAuOTM1aC0yLjgyOGMtMC41MTYsMC0wLjkzNCwwLjQxOC0wLjkzNCwwLjkzNXYwLjUwMWgtMy42NmMtMC40MDQsMC0wLjcyOSwwLjMyNi0wLjcyOSwwLjcyOXY2Ljc1NGgtMS4zODZjLTAuMzUtMi4wNjktMi4xNTItMy42NS00LjMxOC0zLjY1Yy0yLjQxNCwwLTQuMzc5LDEuOTY1LTQuMzc5LDQuMzc5czEuOTY1LDQuMzc5LDQuMzc5LDQuMzc5YzIuMTY2LDAsMy45NjktMS41OCw0LjMxOC0zLjY0N2gxLjM4NnY2Ljc1MmMwLDAuNDA0LDAuMzI1LDAuNzI5LDAuNzI5LDAuNzI5aDMuNjZ2MC41YzAsMC41MTcsMC40MTgsMC45MzUsMC45MzQsMC45MzVoMi44MjhjMC41MTYsMCwwLjkzNC0wLjQxOCwwLjkzNC0wLjkzNXYtMi44MjhjMC0wLjUxNi0wLjQxOC0wLjkzNC0wLjkzNC0wLjkzNGgtMi44MjhjLTAuNTE2LDAtMC45MzQsMC40MTgtMC45MzQsMC45MzR2MC44NjloLTIuOTMxVjEzLjIzaDIuOTMxdjAuNjg0YzAsMC41MTYsMC40MTgsMC45MzYsMC45MzQsMC45MzZoMi44MjhjMC41MTYsMCwwLjkzNC0wLjQyLDAuOTM0LTAuOTM2di0yLjgyN2MwLTAuNTE3LTAuNDE4LTAuOTM1LTAuOTM0LTAuOTM1aC0yLjgyOGMtMC41MTYsMC0wLjkzNCwwLjQxOC0wLjkzNCwwLjkzNXYwLjY4NWgtMi45MzFWNS43NDhoMi45MzF2MC44NjhDMTcuMzg5LDcuMTMzLDE3LjgwNyw3LjU1MSwxOC4zMjIsNy41NTFMMTguMzIyLDcuNTUxeiBNNy43NDUsMTIuNTAyYzAsMC4yNDYtMC4yMDEsMC40NDgtMC40NDksMC40NDhINS43MDdjLTAuMjQ2LDAtMC40NDgtMC4yMDItMC40NDgtMC40NDhjMC0wLjI0OCwwLjIwMi0wLjQ0OSwwLjQ0OC0wLjQ0OWgxLjE0di0xLjkxYzAtMC4yNDcsMC4yMDEtMC40NDgsMC40NDktMC40NDhzMC40NDksMC4yMDEsMC40NDksMC40NDhWMTIuNTAyeiIvPjwvZz48L3N2Zz4=') no-repeat 50% 100%;
+      display: inline-block;
+      height: 42px;
+      width: 30px; }
   .pasos .description {
     background: white;
     -webkit-border-radius: 50%;
@@ -1122,14 +1127,20 @@ a.btn {
   font-size: 18px;
   font-weight: 600;
   height: 55px;
-  line-height: 55px; }
+  line-height: 55px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
   a.btn.cta {
-    background: #fbb714;
+    background: white;
     margin: 90px auto 0;
     width: 233px;
     display: block; }
   a.btn:hover {
-    background: #1a1a1a; }
+    background: #333333;
+    color: white; }
 
 /* =FOOTER
 -------------------------------------------------------------- */
