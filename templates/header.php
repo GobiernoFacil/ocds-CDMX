@@ -18,7 +18,9 @@
 	<meta property="og:description" content="<?php echo !$description ? "" :  $description ;?>"/>
 	<meta property="og:image" content="<?php echo $url;?>img/<?php echo !$og_image ? "cdmx_og.png" : $og_image ;?>"/>
 	<meta property="fb:app_id" content=""/>
-	
+	<link rel="shortcut icon" href="img/icon/CDMX_16.png" sizes="16x16">
+	<link rel="shortcut icon" href="img/icon/CDMX_32.png" sizes="32x32">
+	<link rel="shortcut icon" href="img/icon/CDMX_64.png" sizes="64x64">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/styles.css">
 <!--
