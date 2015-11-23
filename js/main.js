@@ -17,7 +17,6 @@ require.config({
     timelineMax : "bower_components/gsap/src/minified/TimelineMax.min",
     tweenLite   : "bower_components/gsap/src/minified/TweenLite.min",
     tweenMax    : "bower_components/gsap/src/minified/TweenMax.min"
-
   },
   shim : {
     backbone : {
