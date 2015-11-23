@@ -814,6 +814,9 @@ input:focus, select:focus, textarea:focus {
 html {
   background: #ebebe8; }
 
+div {
+  font-family: 'Stilu', Helvetica, Arial, sans-serif; }
+
 .center {
   text-align: center; }
 
@@ -919,6 +922,7 @@ small {
     .etapas h1 a:hover {
       color: #eb008b; }
 .etapas p {
+  font-family: 'Stilu', Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.5; }
 
