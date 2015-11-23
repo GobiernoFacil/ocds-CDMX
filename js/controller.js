@@ -1,6 +1,6 @@
-// PROMÉXICO - AGENDA
-// @package  : promexico
-// @location : /js/apps/agenda
+// CDMX - HOME
+// @package  : cdmx
+// @location : /js
 // @file     : controller.js
 // @author   : Gobierno fácil <howdy@gobiernofacil.com>
 // @url      : http://gobiernofacil.com
