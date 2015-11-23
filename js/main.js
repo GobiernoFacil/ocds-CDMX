@@ -13,16 +13,19 @@ require.config({
     backbone    : "bower_components/backbone/backbone",
     underscore  : "bower_components/underscore/underscore-min",
     text        : "bower_components/requirejs-text/text",
-    scrollMagic : "bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min",
+    ScrollMagic : "bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic",
+    "ScrollMagic.animation.gsap" : "bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap",
     timelineMax : "bower_components/gsap/src/minified/TimelineMax.min",
     tweenLite   : "bower_components/gsap/src/minified/TweenLite.min",
-    tweenMax    : "bower_components/gsap/src/minified/TweenMax.min"
+    tweenMax    : "bower_components/gsap/src/minified/TweenMax.min",
+    splitText   : "bower_components/gsap/src/minified/utils/SplitText.min"
   },
   shim : {
     backbone : {
       deps    : ["jquery", "underscore"],
       exports : "Backbone"
-    }
+    },
+    "ScrollMagic.animation.gsap" : ["ScrollMagic"]
   }
 });
 
