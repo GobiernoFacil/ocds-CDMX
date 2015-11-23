@@ -18,5 +18,14 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "backbone": "~1.2.3",
+    "requirejs": "~2.1.22",
+    "gsap": "~1.18.0",
+    "jquery": "~2.1.4",
+    "scrollmagic": "~2.0.5",
+    "text": "~2.0.14",
+    "velocity": "~1.2.3"
+  }
 }
