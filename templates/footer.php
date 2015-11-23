@@ -55,7 +55,7 @@
 
 	</script>
 	
-	<script data-main="js/main" src="/js/bower_components/requirejs/require.js"></script>
+	<script data-main="js/main" src="js/bower_components/requirejs/require.js"></script>
 	
 	
 </body>
