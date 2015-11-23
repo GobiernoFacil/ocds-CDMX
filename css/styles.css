@@ -812,7 +812,7 @@ input:focus, select:focus, textarea:focus {
 /* =Main content and comment content
 -------------------------------------------------------------- */
 html {
-  background: #eb008b; }
+  background: #ebebe8; }
 
 .center {
   text-align: center; }
@@ -875,6 +875,7 @@ small {
 /* =Participacion 
 -------------------------------------------------------------- */
 .participacion {
+  background: #eb008b;
   color: white; }
   .participacion h1 {
     font-family: 'Geomanist', Helvetica, Arial, sans-serif;
