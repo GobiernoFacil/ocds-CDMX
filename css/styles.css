@@ -1262,14 +1262,51 @@ footer {
   section {
     padding-top: 120px;
     padding-bottom: 130px; }
-  .participacion h1 {
+  .participacion h1, .etapas h1, .win h1, .tools h1 {
     font-size: 1.7em; }
+  .win .quote p, .win .quote p strong {
+    font-size: 15px; }
   a.btn.cta {
     font-size: 14px;
     height: 35px;
     line-height: 35px;
     margin: 40px auto 0;
-    width: 180px; } }
+    width: 180px; }
+  div {
+    font-size: 13px;
+    line-height: 1.5; }
+  .stages li {
+    width: 18.5%; }
+  .tools {
+    text-align: center; }
+    .tools .slide {
+      margin-bottom: 50px; }
+    .tools a.btn {
+      font-size: 14px;
+      height: 35px;
+      line-height: 35px;
+      width: 230px; }
+  footer {
+    text-align: center; }
+    footer .cdmx_w {
+      margin: 0 auto; }
+    footer h3 {
+      font-size: 18px; }
+    footer .partners {
+      padding: 40px 0 60px; }
+      footer .partners h4 {
+        margin-bottom: 15px; }
+      footer .partners .ocds {
+        background-size: 100% auto; }
+    footer .copy, footer .author, footer .copy .right {
+      text-align: center; }
+    footer .copy p {
+      font-size: 11px; }
+    footer .author {
+      padding: 40px 0 30px; }
+      footer .author a {
+        float: none;
+        margin: 5px auto; } }
 
 @media screen and (min-width: 481px) and (max-width: 767px) { }
 
