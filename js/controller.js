@@ -53,9 +53,9 @@ define(function(require){
 
     setupScroll : function(){
       var servidor = new TimelineMax({repeat:-1});
-      servidor.add(TweenMax.to(document.getElementById("cabeza_servidor"), .8, {rotation: 10, x:5, y:5, transformOrigin:"50% 50%"}));
+      servidor.add(TweenMax.to(document.getElementById("cabeza_servidor"), .8, {rotation: 5, x:2, y:2, transformOrigin:"50% 50%"}));
       servidor.add(TweenMax.to(document.getElementById("cabeza_servidor"), .8, {rotation: 0, x:0, y:0, transformOrigin:"50% 50%"}));
-      servidor.add(TweenMax.to(document.getElementById("cabeza_servidor"), .8, {rotation: -10, x:-5, y:5, transformOrigin:"50% 50%"}));
+      servidor.add(TweenMax.to(document.getElementById("cabeza_servidor"), .8, {rotation: -5, x:-2, y:2, transformOrigin:"50% 50%"}));
       servidor.add(TweenMax.to(document.getElementById("cabeza_servidor"), .8, {rotation: 0, x:0, y:0, transformOrigin:"50% 50%"}));
 
 
