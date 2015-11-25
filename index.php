@@ -5,6 +5,13 @@
 	$og_image		= "img/og/contrataciones-abiertas-cdmx.png";
 	$canonical		= $url;
 	include "templates/header.php";?>
+	
+	<ul id="menu_scroll">
+		<li><a href="#" class="current"></a>
+		<li><a href="#"></a>
+		<li><a href="#"></a>
+		<li><a href="#"></a>
+	</ul>
 	<!--participación-->
 	<section class="participacion">
 		<div class="container">
