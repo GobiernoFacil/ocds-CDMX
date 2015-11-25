@@ -7,7 +7,7 @@
 // @url     : http://gobiernofacil.com
 
 require.config({
-  baseUrl : "/js",
+  baseUrl : "js",
   paths : {
     d3          : "bower_components/d3/d3",
     jquery      : "bower_components/jquery/dist/jquery.min",
