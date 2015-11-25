@@ -12,12 +12,13 @@ define(function(require){
   // --------------------------------------------------------------------------------
   //
   var Backbone    = require('backbone'),
+      d3          = require("d3"),
       ScrollMagic = require("ScrollMagic"),
-      TweenLite   = require("tweenLite"),
+      TweenLite   = require("TweenLite"),
       SplitText   = require("splitText"),
-      TweenMax    = require("tweenMax"),
-      xxx      = require("ScrollMagic.animation.gsap"),
-      TimelineMax = require("timelineMax");
+      TweenMax    = require("TweenMax"),
+      xxx         = require("ScrollMagic.animation.gsap"),
+      TimelineMax = require("TimelineMax");
   //
   // D E F I N E   T H E   S E T U P   V A R I A B L E S
   // --------------------------------------------------------------------------------
@@ -51,6 +52,12 @@ define(function(require){
     },
 
     setupScroll : function(){
+      var servidor = new TimelineMax({repeat:-1});
+      servidor.add(TweenMax.to(document.getElementById("cabeza_servidor"), .8, {rotation: 10, x:5, y:5, transformOrigin:"50% 50%"}));
+      servidor.add(TweenMax.to(document.getElementById("cabeza_servidor"), .8, {rotation: 0, x:0, y:0, transformOrigin:"50% 50%"}));
+      servidor.add(TweenMax.to(document.getElementById("cabeza_servidor"), .8, {rotation: -10, x:-5, y:5, transformOrigin:"50% 50%"}));
+      servidor.add(TweenMax.to(document.getElementById("cabeza_servidor"), .8, {rotation: 0, x:0, y:0, transformOrigin:"50% 50%"}));
+
 
       var mySplit = new SplitText("#mini-description-a", {type: "chars, lines, words"}),
           chars   = mySplit.chars,
