@@ -43,23 +43,23 @@
 				</div>
 				<div class="col-sm-6 pasos">
 					<!-- planeación -->
-					<div class="slide-1 planeacion">
+					<div class="slide e-1 planeacion">
 							<?php include "includes/contrataciones/stages-planeacion.php";?>
 					</div>
 					<!--licitación-->
-					<div class="slide-2 licitacion">
+					<div class="slide e-2 licitacion">
 						<?php include "includes/contrataciones/stages-licitacion.php";?>
 					</div>
 					<!--adjudicacion-->
-					<div class="slide-2 adjudicacion">
+					<div class="slide e-2 adjudicacion">
 						<?php include "includes/contrataciones/stages-adjudicacion.php";?>
 					</div>
 					<!--contrato-->
-					<div class="slide-2 contrato">
+					<div class="slide e-2 contrato">
 						<?php include "includes/contrataciones/stages-contrato.php";?>
 					</div>
 					<!--implementación-->
-					<div class="slide-2 implementacion">
+					<div class="slide e-2 implementacion">
 						<?php include "includes/contrataciones/stages-implementacion.php";?>
 					</div>
 				</div>
