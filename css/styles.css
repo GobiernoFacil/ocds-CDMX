@@ -913,24 +913,34 @@ nav#menu {
       background: rgba(255, 255, 255, 0.9);
       border: 2px solid rgba(0, 0, 0, 0.7); }
 
-/* =Participacion 
+/* =Participacion / datos
 -------------------------------------------------------------- */
-.participacion {
+.participacion, .lead.datos {
   background: #eb008b;
   color: white; }
-  .participacion h1 {
+  .participacion h1, .lead.datos h1 {
     font-family: 'Geomanist', Helvetica, Arial, sans-serif;
     font-size: 76px;
     font-weight: 300;
     line-height: 1.2;
     text-align: center; }
-    .participacion h1 span {
+    .participacion h1 span, .lead.datos h1 span {
       font-weight: 500; }
-    .participacion h1 span.mx {
+    .participacion h1 span.mx, .lead.datos h1 span.mx {
       font-weight: 600; }
-    .participacion h1 strong {
+    .participacion h1 strong, .lead.datos h1 strong {
       color: black;
       font-family: 'Geomanist Ultra', Helvetica, Arial, sans-serif; }
+
+.lead.datos {
+  background: #8e878c; }
+  .lead.datos h1 strong {
+    color: white; }
+  .lead.datos a.btn.cta {
+    background: #eb008b;
+    color: white; }
+    .lead.datos a.btn.cta:hover {
+      background: #444; }
 
 /* =home sections 
 -------------------------------------------------------------- */
