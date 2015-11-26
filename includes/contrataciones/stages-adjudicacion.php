@@ -1,6 +1,6 @@
 <h2> <b></b> Adjudicación</h2>
 <!-- plenación-->
-<div class="planeacion">
+<div class="adjudicacion">
 	<div class="description">
 		<p>Valor de la adjudicación</p>
 	</div>
