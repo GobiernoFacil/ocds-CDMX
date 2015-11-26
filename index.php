@@ -1,7 +1,7 @@
 	<?php 	
 	$body_class 	= "home";
 	$title 			= "Contrataciones Abiertas de la Ciudad de México";
-	$description 	= "Presupuesto de Egresos de la Federación PROYECTO 2016";
+	$description 	= "Contrataciones Abiertas de la Ciudad de México";
 	$og_image		= "img/og/contrataciones-abiertas-cdmx.png";
 	$canonical		= $url;
 	include "templates/header.php";?>
