@@ -19,7 +19,8 @@ require.config({
     TimelineMax : "bower_components/gsap/src/minified/TimelineMax.min",
     TweenLite   : "bower_components/gsap/src/minified/TweenLite.min",
     TweenMax    : "bower_components/gsap/src/minified/TweenMax.min",
-    splitText   : "bower_components/gsap/src/minified/utils/SplitText.min"
+    splitText   : "bower_components/gsap/src/minified/utils/SplitText.min",
+    ScrollToPlugin : "bower_components/gsap/src/minified/plugins/ScrollToPlugin.min",
   },
   shim : {
     backbone : {

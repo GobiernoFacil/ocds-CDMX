@@ -11,14 +11,15 @@ define(function(require){
   // L O A D   T H E   A S S E T S   A N D   L I B R A R I E S
   // --------------------------------------------------------------------------------
   //
-  var Backbone    = require('backbone'),
-      d3          = require("d3"),
-      ScrollMagic = require("ScrollMagic"),
-      TweenLite   = require("TweenLite"),
-      SplitText   = require("splitText"),
-      TweenMax    = require("TweenMax"),
-      xxx         = require("ScrollMagic.animation.gsap"),
-      TimelineMax = require("TimelineMax");
+  var Backbone       = require('backbone'),
+      d3             = require("d3"),
+      ScrollMagic    = require("ScrollMagic"),
+      TweenLite      = require("TweenLite"),
+      SplitText      = require("splitText"),
+      TweenMax       = require("TweenMax"),
+      xxx            = require("ScrollMagic.animation.gsap"),
+      ScrollToPlugin = require("ScrollToPlugin"),
+      TimelineMax    = require("TimelineMax"),
   //
   // D E F I N E   T H E   S E T U P   V A R I A B L E S
   // --------------------------------------------------------------------------------
@@ -31,6 +32,17 @@ define(function(require){
   // --------------------------------------------------------------------------------
   //
 
+  // STEPS
+  Planning = document.querySelector(".slide.e-1.planeacion"),
+  Bidding  = document.querySelector(".slide.e-2.licitacion"),
+  Award    = document.querySelector(".slide.e-2.adjudicacion"),
+  Contract = document.querySelector(".slide.e-2.contrato"),
+  Implementation = document.querySelector(".slide.e-2.implementacion"),
+
+  // POSIBILITIES
+  Viz    = document.querySelector("#tools-visualize"),
+  Api    = document.querySelector("#tools-api"),
+  Social = document.querySelector("#tools-social");
  
 
   //
@@ -40,16 +52,198 @@ define(function(require){
 
   var controller =  Backbone.View.extend({
     events : {
-      "click #link_nav_planeacion"     : "show_planeacion",
-      "click #link_nav_licitacion"     : "show_licitacion",
-      "click #link_nav_adjudicacion"   : "show_adjudicacion",
-      "click #link_nav_contratacion"   : "show_contratacion",
-      "click #link_nav_implementacion" : "show_implementacion"
+      // NAVIGATION
+      "click .cta" : "move_to_second",
+      "click #goto-step1" : "move_to_first",
+      "click #goto-step2" : "move_to_second",
+      "click #goto-step3" : "move_to_third",
+      "click #goto-step4" : "move_to_fourth",
+
+      // STANDAR
+      "click #link_nav_planeacion"     : "show_planning",
+      "click #link_nav_licitacion"     : "show_bidding",
+      "click #link_nav_adjudicacion"   : "show_award",
+      "click #link_nav_contratacion"   : "show_contract",
+      "click #link_nav_implementacion" : "show_implementation",
+
+      // POSIBILITIES
+      "click #tools-visualize-btn" : "show_viz",
+      "click #tools-api-btn"       : "show_api",
+      "click #tools-social-btn"    : "show_social"
     },
+
     el : "body",
+
+    //
+    // S E T U P   S C E N E S
+    // --------------------------------------------------------------------------------
+    //
+
     initialize : function(){
-      this.setupScroll();
+      this.hide_stuff();
+      this.set_animation_controller();
     },
+
+    set_animation_controller : function(){
+      this.animation = new ScrollMagic.Controller();
+      this.set_first_scene();
+      this.set_second_scene();
+      this.set_third_scene();
+      this.set_fourth_scene();
+    },
+
+    hide_stuff : function(){
+      Bidding.style.display = "none";
+      Award.style.display = "none";
+      Contract.style.display = "none";
+      Implementation.style.display = "none";
+      Api.style.display = "none";
+      Social.style.display = "none";
+    },
+
+    set_first_scene : function(){
+      this.scene1 = new ScrollMagic.Scene({
+        triggerElement : ".participacion",
+        //duration : 400
+      })
+      //.setTween(tl)
+      //.setPin(".participacion")
+      .addTo(this.animation);
+    },
+
+    set_second_scene : function(){
+      this.scene2 = new ScrollMagic.Scene({
+        triggerElement : ".etapas .container",
+        duration : 400,
+        offset : -70
+      })
+      //.setTween(tl)
+      //.setPin(".etapas")
+      .addTo(this.animation);
+    },
+
+    set_third_scene : function(){
+      this.scene3 = new ScrollMagic.Scene({
+        triggerElement : ".win",
+        duration : 400
+      })
+      //.setTween(tl)
+      //.setPin(".win")
+      .addTo(this.animation);
+    },
+
+    set_fourth_scene : function(){
+      this.scene4 = new ScrollMagic.Scene({
+        triggerElement : ".tools",
+        duration : 400
+      })
+      //.setTween(tl)
+      //.setPin(".tools")
+      .addTo(this.animation);
+    },
+
+    //
+    // G E N E R A L   T R A N S I T I O N S
+    // --------------------------------------------------------------------------------
+    //
+
+    move_to_first : function(e){
+      e.preventDefault(); 
+      var y = this.scene1.triggerPosition();
+      TweenMax.to(window, 1, {scrollTo:{y: y}, ease:Power2.easeOut});
+    },
+
+    move_to_second : function(e){
+      e.preventDefault(); 
+      var y = this.scene2.triggerPosition();
+      TweenMax.to(window, 1, {scrollTo:{y: y}, ease:Power2.easeOut});
+    },
+
+    move_to_third : function(e){
+      e.preventDefault(); 
+      var y = this.scene3.triggerPosition();
+      TweenMax.to(window, 1, {scrollTo:{y: y}, ease:Power2.easeOut});
+    },
+
+    move_to_fourth : function(e){
+      e.preventDefault(); 
+      var y = this.scene4.triggerPosition();
+      TweenMax.to(window, 1, {scrollTo:{y: y}, ease:Power2.easeOut});
+    },
+
+    //
+    // L O C A L   T R A N S I T I O N S
+    // --------------------------------------------------------------------------------
+    //
+
+    show_planning : function(e){
+      e.preventDefault();
+      Planning.style.display       = "block";
+      Bidding.style.display        = "none";
+      Award.style.display          = "none";
+      Contract.style.display       = "none";
+      Implementation.style.display = "none";
+    },
+
+    show_bidding : function(e){
+      e.preventDefault();
+      Planning.style.display       = "none";
+      Bidding.style.display        = "block";
+      Award.style.display          = "none";
+      Contract.style.display       = "none";
+      Implementation.style.display = "none";
+    },
+
+    show_award : function(e){
+      e.preventDefault();
+      Planning.style.display       = "none";
+      Bidding.style.display        = "none";
+      Award.style.display          = "block";
+      Contract.style.display       = "none";
+      Implementation.style.display = "none";
+    },
+
+    show_contract : function(e){
+      e.preventDefault();
+      Planning.style.display       = "none";
+      Bidding.style.display        = "none";
+      Award.style.display          = "none";
+      Contract.style.display       = "block";
+      Implementation.style.display = "none";
+    },
+
+    show_implementation : function(e){
+      e.preventDefault();
+      Planning.style.display       = "none";
+      Bidding.style.display        = "none";
+      Award.style.display          = "none";
+      Contract.style.display       = "none";
+      Implementation.style.display = "block";
+    },
+
+    show_viz : function(e){
+      e.preventDefault();
+      Viz.style.display    = "block";
+      Api.style.display    = "none";
+      Social.style.display = "none";
+    },
+
+    show_api : function(e){
+      e.preventDefault();
+      Viz.style.display    = "none";
+      Api.style.display    = "block";
+      Social.style.display = "none";
+    },
+
+    show_social : function(e){
+      e.preventDefault();
+      Viz.style.display    = "none";
+      Api.style.display    = "none";
+      Social.style.display = "block";
+    }
+
+
+    /*
 
     setupScroll : function(){
       var servidor = new TimelineMax({repeat:-1});
@@ -87,28 +281,7 @@ define(function(require){
             duration : 400
           }).setPin(".tools").addTo(animation);
     },
-
-    animate_text : function(){
-      
-    },
-
-    //
-    show_planeacion : function(e){
-      e.preventDefault();
-      this.animate_text();
-    },
-
-    show_licitacion : function(e){
-    },
-
-    show_adjudicacion : function(e){
-    },
-
-    show_contratacion : function(e){
-    },
-
-    show_implementacion : function(e){
-    }
+    */
   });
 
     
