@@ -2,7 +2,7 @@
 	<h1>¿Qué más podrás hacer con  las <span>contrataciones abiertas</span>* de la CD<strong>MX</strong>?</h1>
 </div>
 <div class="col-sm-8 col-sm-offset-2 slide">
-	<div class="row">
+	<div class="row" id="tools-visualize">
 		<div class="col-sm-5">
 			<?php echo file_get_contents("img/dataviz.svg"); ?>	
 		</div>
@@ -11,7 +11,7 @@
 			<p>Observa en qué productos o servicios gasta más el gobierno.</p>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row"  id="tools-api">
 		<div class="col-sm-5">
 			<?php echo file_get_contents("img/svg/i_api.svg"); ?>	
 		</div>
@@ -20,7 +20,7 @@
 			<p>Utiliza los datos de las contrataciones para crear tus propias herramientas</p>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row"  id="tools-social">
 		<div class="col-sm-5">
 			<?php echo file_get_contents("img/svg/ilustracion_redes.svg"); ?>	
 		</div>

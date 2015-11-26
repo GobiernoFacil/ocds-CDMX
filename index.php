@@ -7,10 +7,10 @@
 	include "templates/header.php";?>
 	
 	<ul id="menu_scroll">
-		<li><a href="#" class="current"></a>
-		<li><a href="#"></a>
-		<li><a href="#"></a>
-		<li><a href="#"></a>
+		<li><a id="goto-step1" href="#" class="current"></a>
+		<li><a id="goto-step2" href="#"></a>
+		<li><a id="goto-step3" href="#"></a>
+		<li><a id="goto-step4" href="#"></a>
 	</ul>
 	<!--participación-->
 	<section class="participacion">
