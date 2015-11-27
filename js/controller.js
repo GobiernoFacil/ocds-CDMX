@@ -115,7 +115,7 @@ define(function(require){
       this.scene2 = new ScrollMagic.Scene({
         triggerElement : ".etapas .container",
         duration : 400,
-        offset : -70
+        offset : -100
       })
       //.setTween(tl)
       //.setPin(".etapas")
@@ -125,7 +125,8 @@ define(function(require){
     set_third_scene : function(){
       this.scene3 = new ScrollMagic.Scene({
         triggerElement : ".win",
-        duration : 400
+        duration : 400,
+        offset : 30
       })
       //.setTween(tl)
       //.setPin(".win")
@@ -135,7 +136,8 @@ define(function(require){
     set_fourth_scene : function(){
       this.scene4 = new ScrollMagic.Scene({
         triggerElement : ".tools",
-        duration : 400
+        duration : 400,
+        offset : 20
       })
       //.setTween(tl)
       //.setPin(".tools")
@@ -151,24 +153,32 @@ define(function(require){
       e.preventDefault(); 
       var y = this.scene1.triggerPosition();
       TweenMax.to(window, 1, {scrollTo:{y: y}, ease:Power2.easeOut});
+      $("#menu_scroll a").removeClass("current");
+      $("#goto-step1").addClass("current");
     },
 
     move_to_second : function(e){
       e.preventDefault(); 
       var y = this.scene2.triggerPosition();
       TweenMax.to(window, 1, {scrollTo:{y: y}, ease:Power2.easeOut});
+      $("#menu_scroll a").removeClass("current");
+      $("#goto-step2").addClass("current");
     },
 
     move_to_third : function(e){
       e.preventDefault(); 
       var y = this.scene3.triggerPosition();
       TweenMax.to(window, 1, {scrollTo:{y: y}, ease:Power2.easeOut});
+      $("#menu_scroll a").removeClass("current");
+      $("#goto-step3").addClass("current");
     },
 
     move_to_fourth : function(e){
       e.preventDefault(); 
       var y = this.scene4.triggerPosition();
       TweenMax.to(window, 1, {scrollTo:{y: y}, ease:Power2.easeOut});
+      $("#menu_scroll a").removeClass("current");
+      $("#goto-step4").addClass("current");
     },
 
     //
@@ -183,6 +193,8 @@ define(function(require){
       Award.style.display          = "none";
       Contract.style.display       = "none";
       Implementation.style.display = "none";
+      $("a.nav_stage").removeClass("current");
+      $("#link_nav_planeacion").addClass("current");
     },
 
     show_bidding : function(e){
@@ -192,6 +204,8 @@ define(function(require){
       Award.style.display          = "none";
       Contract.style.display       = "none";
       Implementation.style.display = "none";
+      $("a.nav_stage").removeClass("current");
+      $("#link_nav_licitacion").addClass("current");
     },
 
     show_award : function(e){
@@ -201,6 +215,8 @@ define(function(require){
       Award.style.display          = "block";
       Contract.style.display       = "none";
       Implementation.style.display = "none";
+      $("a.nav_stage").removeClass("current");
+      $("#link_nav_adjudicacion").addClass("current");
     },
 
     show_contract : function(e){
@@ -210,6 +226,8 @@ define(function(require){
       Award.style.display          = "none";
       Contract.style.display       = "block";
       Implementation.style.display = "none";
+      $("a.nav_stage").removeClass("current");
+      $("#link_nav_contratacion").addClass("current");
     },
 
     show_implementation : function(e){
@@ -219,6 +237,8 @@ define(function(require){
       Award.style.display          = "none";
       Contract.style.display       = "none";
       Implementation.style.display = "block";
+      $("a.nav_stage").removeClass("current");
+      $("#link_nav_implementacion").addClass("current");
     },
 
     show_viz : function(e){
@@ -226,6 +246,8 @@ define(function(require){
       Viz.style.display    = "block";
       Api.style.display    = "none";
       Social.style.display = "none";
+      $(".tools li a").removeClass("current");
+      $("#tools-visualize-btn").addClass("current");
     },
 
     show_api : function(e){
@@ -233,6 +255,8 @@ define(function(require){
       Viz.style.display    = "none";
       Api.style.display    = "block";
       Social.style.display = "none";
+      $(".tools li a").removeClass("current");
+      $("#tools-api-btn").addClass("current");
     },
 
     show_social : function(e){
@@ -240,6 +264,8 @@ define(function(require){
       Viz.style.display    = "none";
       Api.style.display    = "none";
       Social.style.display = "block";
+      $(".tools li a").removeClass("current");
+      $("#tools-social-btn").addClass("current");
     }
 
 
