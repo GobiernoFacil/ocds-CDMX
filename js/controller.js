@@ -43,6 +43,37 @@ define(function(require){
   Viz    = document.querySelector("#tools-visualize"),
   Api    = document.querySelector("#tools-api"),
   Social = document.querySelector("#tools-social");
+
+  //
+  // S E T   T H E   R O U T E R
+  // --------------------------------------------------------------------------------
+  //
+
+  var Router = Backbone.Router.extend({
+    routes : {
+      ""              : "first",
+      "estandar"      : "second",
+      "todos-ganamos" : "third",
+      "que-hacer"     : "fourth"
+    },
+
+    initialize : function(settings){
+      this.controller = settings.controller;
+    },
+
+    first : function(){
+    },
+    second : function(){
+      this.controller.move_to_second();
+    },
+    third : function(){
+      this.controller.move_to_third();
+    },
+    fourth : function(){
+      this.controller.move_to_fourth();
+    }
+  });
+
  
 
   //
@@ -82,6 +113,8 @@ define(function(require){
     initialize : function(){
       this.hide_stuff();
       this.set_animation_controller();
+      this.router = new Router({controller : this});
+      Backbone.history.start({pushState: true});
     },
 
     set_animation_controller : function(){
@@ -105,7 +138,8 @@ define(function(require){
       var that = this;
       this.scene1 = new ScrollMagic.Scene({
         triggerElement : ".participacion .container",
-        duration : 400
+        duration : 400,
+        //offset : -160
       })
       //.setTween(tl)
       //.setPin(".participacion")
@@ -166,28 +200,28 @@ define(function(require){
     //
 
     move_to_first : function(e){
-      e.preventDefault(); 
+      if(e) e.preventDefault(); 
       var y = this.scene1.triggerPosition();
       TweenMax.to(window, 1, {scrollTo:{y: y}, ease:Power2.easeOut});
       this.enter_first();
     },
 
     move_to_second : function(e){
-      e.preventDefault(); 
+      if(e) e.preventDefault(); 
       var y = this.scene2.triggerPosition();
       TweenMax.to(window, 1, {scrollTo:{y: y}, ease:Power2.easeOut});
       this.enter_second();
     },
 
     move_to_third : function(e){
-      e.preventDefault(); 
+      if(e) e.preventDefault(); 
       var y = this.scene3.triggerPosition();
       TweenMax.to(window, 1, {scrollTo:{y: y}, ease:Power2.easeOut});
       this.enter_third();
     },
 
     move_to_fourth : function(e){
-      e.preventDefault(); 
+      if(e) e.preventDefault(); 
       var y = this.scene4.triggerPosition();
       TweenMax.to(window, 1, {scrollTo:{y: y}, ease:Power2.easeOut});
       this.enter_fourth();
@@ -196,21 +230,25 @@ define(function(require){
     enter_first : function(){
       $("#menu_scroll a").removeClass("current");
       $("#goto-step1").addClass("current");
+      this.router.navigate("");
     },
 
     enter_second : function(){
       $("#menu_scroll a").removeClass("current");
       $("#goto-step2").addClass("current");
+      this.router.navigate("estandar");
     },
 
     enter_third : function(){
       $("#menu_scroll a").removeClass("current");
       $("#goto-step3").addClass("current");
+      this.router.navigate("todos-ganamos");
     },
 
     enter_fourth : function(){
       $("#menu_scroll a").removeClass("current");
       $("#goto-step4").addClass("current");
+      this.router.navigate("que-hacer");
     },
 
     //
