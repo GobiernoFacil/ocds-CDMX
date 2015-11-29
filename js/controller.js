@@ -102,16 +102,21 @@ define(function(require){
     },
 
     set_first_scene : function(){
+      var that = this;
       this.scene1 = new ScrollMagic.Scene({
-        triggerElement : ".participacion",
-        //duration : 400
+        triggerElement : ".participacion .container",
+        duration : 400
       })
       //.setTween(tl)
       //.setPin(".participacion")
-      .addTo(this.animation);
+      .addTo(this.animation)
+      .on("enter", function(e){
+        that.enter_first();
+      });
     },
 
     set_second_scene : function(){
+      var that = this;
       this.scene2 = new ScrollMagic.Scene({
         triggerElement : ".etapas .container",
         duration : 400,
@@ -119,10 +124,14 @@ define(function(require){
       })
       //.setTween(tl)
       //.setPin(".etapas")
-      .addTo(this.animation);
+      .addTo(this.animation)
+      .on("enter", function(e){
+        that.enter_second();
+      });;
     },
 
     set_third_scene : function(){
+      var that = this;
       this.scene3 = new ScrollMagic.Scene({
         triggerElement : ".win",
         duration : 400,
@@ -130,10 +139,14 @@ define(function(require){
       })
       //.setTween(tl)
       //.setPin(".win")
-      .addTo(this.animation);
+      .addTo(this.animation)
+      .on("enter", function(e){
+        that.enter_third();
+      });;
     },
 
     set_fourth_scene : function(){
+      var that = this;
       this.scene4 = new ScrollMagic.Scene({
         triggerElement : ".tools",
         duration : 400,
@@ -141,7 +154,10 @@ define(function(require){
       })
       //.setTween(tl)
       //.setPin(".tools")
-      .addTo(this.animation);
+      .addTo(this.animation)
+      .on("enter", function(e){
+        that.enter_fourth();
+      });;
     },
 
     //
@@ -153,30 +169,46 @@ define(function(require){
       e.preventDefault(); 
       var y = this.scene1.triggerPosition();
       TweenMax.to(window, 1, {scrollTo:{y: y}, ease:Power2.easeOut});
-      $("#menu_scroll a").removeClass("current");
-      $("#goto-step1").addClass("current");
+      this.enter_first();
     },
 
     move_to_second : function(e){
       e.preventDefault(); 
       var y = this.scene2.triggerPosition();
       TweenMax.to(window, 1, {scrollTo:{y: y}, ease:Power2.easeOut});
-      $("#menu_scroll a").removeClass("current");
-      $("#goto-step2").addClass("current");
+      this.enter_second();
     },
 
     move_to_third : function(e){
       e.preventDefault(); 
       var y = this.scene3.triggerPosition();
       TweenMax.to(window, 1, {scrollTo:{y: y}, ease:Power2.easeOut});
-      $("#menu_scroll a").removeClass("current");
-      $("#goto-step3").addClass("current");
+      this.enter_third();
     },
 
     move_to_fourth : function(e){
       e.preventDefault(); 
       var y = this.scene4.triggerPosition();
       TweenMax.to(window, 1, {scrollTo:{y: y}, ease:Power2.easeOut});
+      this.enter_fourth();
+    },
+
+    enter_first : function(){
+      $("#menu_scroll a").removeClass("current");
+      $("#goto-step1").addClass("current");
+    },
+
+    enter_second : function(){
+      $("#menu_scroll a").removeClass("current");
+      $("#goto-step2").addClass("current");
+    },
+
+    enter_third : function(){
+      $("#menu_scroll a").removeClass("current");
+      $("#goto-step3").addClass("current");
+    },
+
+    enter_fourth : function(){
       $("#menu_scroll a").removeClass("current");
       $("#goto-step4").addClass("current");
     },
