@@ -1238,7 +1238,8 @@ div.forthewin {
     list-style: none;
     margin-bottom: 15px; }
   .codigo code {
-    margin-left: 15px; }
+    margin-left: 15px;
+    word-break: break-all; }
     .codigo code .box {
       font-family: monospace;
       margin-left: 15px;
