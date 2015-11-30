@@ -949,32 +949,32 @@ code {
 
 /* =home sections 
 -------------------------------------------------------------- */
-.etapas, .win, .tools, .datos {
+.etapas, .win, .tools, .datos_pa_labanda {
   background: #ebebe8;
   color: #263333; }
-  .etapas h1, .win h1, .tools h1, .datos h1 {
+  .etapas h1, .win h1, .tools h1, .datos_pa_labanda h1 {
     font-family: 'Geomanist', Helvetica, Arial, sans-serif;
     font-weight: 400;
     margin-bottom: 35px; }
-    .etapas h1 strong, .win h1 strong, .tools h1 strong, .datos h1 strong {
+    .etapas h1 strong, .win h1 strong, .tools h1 strong, .datos_pa_labanda h1 strong {
       color: #eb008b;
       font-weight: 700; }
-    .etapas h1 span, .win h1 span, .tools h1 span, .datos h1 span {
+    .etapas h1 span, .win h1 span, .tools h1 span, .datos_pa_labanda h1 span {
       font-weight: 600; }
 
 /* =etapas 
 -------------------------------------------------------------- */
-.etapas h1, .datos h1 {
+.etapas h1, .datos_pa_labanda h1 {
   font-size: 34px; }
-  .etapas h1 a, .datos h1 a {
+  .etapas h1 a, .datos_pa_labanda h1 a {
     border-bottom: 1px dotted #eb008b;
     color: #263333;
     display: block;
     font-family: 'Geomanist', Helvetica, Arial, sans-serif;
     font-weight: 300; }
-    .etapas h1 a:hover, .datos h1 a:hover {
+    .etapas h1 a:hover, .datos_pa_labanda h1 a:hover {
       color: #eb008b; }
-.etapas p, .datos p {
+.etapas p, .datos_pa_labanda p {
   font-family: 'Stilu', Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.5; }
@@ -1239,8 +1239,12 @@ div.forthewin {
     margin-bottom: 15px; }
   .codigo code {
     margin-left: 15px; }
+    .codigo code .box {
+      font-family: monospace;
+      margin-left: 15px;
+      display: block; }
 
-.datos h2 {
+.datos_pa_labanda h2 {
   font-family: 'Geomanist', Helvetica, Arial, sans-serif;
   border-bottom: 1px solid #cccccc;
   font-size: 24px;
@@ -1248,9 +1252,15 @@ div.forthewin {
   padding-bottom: 15px;
   text-transform: uppercase;
   text-align: center; }
+.datos_pa_labanda a.btn.default {
+  background: #0cabb8;
+  color: white;
+  padding: 10px; }
+  .datos_pa_labanda a.btn.default:hover {
+    background: #444; }
 
 .usa_datos {
-  margin-left: 25px; }
+  margin: 0 0 30px 25px; }
   .usa_datos li {
     list-style: none; }
     .usa_datos li a {
