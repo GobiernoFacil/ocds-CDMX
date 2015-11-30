@@ -115,6 +115,7 @@ define(function(require){
       this.set_animation_controller();
       this.router = new Router({controller : this});
       Backbone.history.start({pushState: true});
+      this.head_animation();
     },
 
     set_animation_controller : function(){
@@ -153,10 +154,10 @@ define(function(require){
       var that = this;
       this.scene2 = new ScrollMagic.Scene({
         triggerElement : ".etapas .container",
-        duration : 400,
+        duration : 300,
         offset : -100
       })
-      //.setTween(tl)
+      .setTween(this.text_animation())
       //.setPin(".etapas")
       .addTo(this.animation)
       .on("enter", function(e){
@@ -171,7 +172,7 @@ define(function(require){
         duration : 400,
         offset : 30
       })
-      //.setTween(tl)
+      //.setTween()
       //.setPin(".win")
       .addTo(this.animation)
       .on("enter", function(e){
@@ -265,6 +266,7 @@ define(function(require){
       Implementation.style.display = "none";
       $("a.nav_stage").removeClass("current");
       $("#link_nav_planeacion").addClass("current");
+      this.animate_planning();
     },
 
     show_bidding : function(e){
@@ -336,19 +338,21 @@ define(function(require){
       Social.style.display = "block";
       $(".tools li a").removeClass("current");
       $("#tools-social-btn").addClass("current");
-    }
+    },
 
+    //
+    // A N I M A T I O N S
+    // --------------------------------------------------------------------------------
+    //
+    head_animation : function(){
+      var servidor = new TimelineMax({repeat:-1, yoyo: true});
+      servidor.add(TweenMax.from(document.querySelectorAll(".cabeza"), .7, {rotation: 5, x:2, y:2, transformOrigin:"50% 50%"}));
+      servidor.add(TweenMax.to(document.querySelectorAll(".cabeza"), .7, {rotation: -5, x:-2, y:2, transformOrigin:"50% 50%"}));
 
-    /*
+      return servidor;
+    },
 
-    setupScroll : function(){
-      var servidor = new TimelineMax({repeat:-1});
-      servidor.add(TweenMax.to(document.getElementById("cabeza_servidor"), .8, {rotation: 5, x:2, y:2, transformOrigin:"50% 50%"}));
-      servidor.add(TweenMax.to(document.getElementById("cabeza_servidor"), .8, {rotation: 0, x:0, y:0, transformOrigin:"50% 50%"}));
-      servidor.add(TweenMax.to(document.getElementById("cabeza_servidor"), .8, {rotation: -5, x:-2, y:2, transformOrigin:"50% 50%"}));
-      servidor.add(TweenMax.to(document.getElementById("cabeza_servidor"), .8, {rotation: 0, x:0, y:0, transformOrigin:"50% 50%"}));
-
-
+    text_animation : function(){
       var mySplit = new SplitText("#mini-description-a", {type: "chars, lines, words"}),
           chars   = mySplit.chars,
           tl      = new TimelineMax();
@@ -359,25 +363,33 @@ define(function(require){
         opacity : 1
       });
 
-
-      var animation = new ScrollMagic.Controller(),
-          scene1    = new ScrollMagic.Scene({
-            triggerElement : ".etapas",
-            duration : 400
-          })
-          .setTween(tl)
-          //.setPin(".etapas")
-          .addTo(animation),
-          scene2    = new ScrollMagic.Scene({
-            triggerElement : ".win",
-            duration : 400
-          }).setPin(".win").addTo(animation),
-          scene3    = new ScrollMagic.Scene({
-            triggerElement : ".tools",
-            duration : 400
-          }).setPin(".tools").addTo(animation);
+      return tl;
     },
-    */
+
+    animate_planning : function(){
+      var m = new TimelineMax();
+      m.add(TweenMax.from(document.querySelectorAll(".slide.e-1.planeacion"), 1, {opacity : 0}));
+    },
+
+    animate_bidding : function(){
+      var m = new TimelineMax();
+      m.add(TweenMax.from(document.querySelectorAll(".slide.e-2.licitacion"), 1, {opacity : 0}));
+    },
+
+    animate_award : function(){
+      var m = new TimelineMax();
+      m.add(TweenMax.from(document.querySelectorAll(".slide.e-2.adjudicacion"), 1, {opacity : 0}));
+    },
+
+    animate_contract : function(){
+      var m = new TimelineMax();
+      m.add(TweenMax.from(document.querySelectorAll(".slide.e-2.contrato"), 1, {opacity : 0}));
+    },
+
+    animate_implementation : function(){
+      var m = new TimelineMax();
+      m.add(TweenMax.from(document.querySelectorAll(".slide.e-2.planeacion"), 1, {opacity : 0}));
+    }
   });
 
     
