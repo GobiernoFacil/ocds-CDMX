@@ -942,34 +942,39 @@ nav#menu {
     .lead.datos a.btn.cta:hover {
       background: #444; }
 
+code {
+  color: #9b9a9a;
+  display: block;
+  font-family: monospace; }
+
 /* =home sections 
 -------------------------------------------------------------- */
-.etapas, .win, .tools {
+.etapas, .win, .tools, .datos {
   background: #ebebe8;
   color: #263333; }
-  .etapas h1, .win h1, .tools h1 {
+  .etapas h1, .win h1, .tools h1, .datos h1 {
     font-family: 'Geomanist', Helvetica, Arial, sans-serif;
     font-weight: 400;
     margin-bottom: 35px; }
-    .etapas h1 strong, .win h1 strong, .tools h1 strong {
+    .etapas h1 strong, .win h1 strong, .tools h1 strong, .datos h1 strong {
       color: #eb008b;
       font-weight: 700; }
-    .etapas h1 span, .win h1 span, .tools h1 span {
+    .etapas h1 span, .win h1 span, .tools h1 span, .datos h1 span {
       font-weight: 600; }
 
 /* =etapas 
 -------------------------------------------------------------- */
-.etapas h1 {
+.etapas h1, .datos h1 {
   font-size: 34px; }
-  .etapas h1 a {
+  .etapas h1 a, .datos h1 a {
     border-bottom: 1px dotted #eb008b;
     color: #263333;
     display: block;
     font-family: 'Geomanist', Helvetica, Arial, sans-serif;
     font-weight: 300; }
-    .etapas h1 a:hover {
+    .etapas h1 a:hover, .datos h1 a:hover {
       color: #eb008b; }
-.etapas p {
+.etapas p, .datos p {
   font-family: 'Stilu', Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.5; }
@@ -1221,6 +1226,67 @@ div.forthewin {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyM3B4IiBoZWlnaHQ9IjIzcHgiIHZpZXdCb3g9IjAgMCAyMyAyMyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjMgMjMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxyZWN0IHg9IjAuMzc5IiB5PSIwLjUiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIyMi4yNDIiIGhlaWdodD0iMjIiLz48cmVjdCB4PSIxLjU2NCIgeT0iMS40MyIgZmlsbD0iI0Y0RjRGNCIgd2lkdGg9IjE5Ljg1OSIgaGVpZ2h0PSIyMC4xNDEiLz48cG9seWdvbiBmaWxsPSIjRTkwQThBIiBwb2ludHM9IjIxLjQyNCwyMS41NyAxLjU2NCwyMS41NyAxLjU2NCw1Ljc1IDQuNzU5LDEyLjA2IDkuNzAzLDMuMjQ3IDE3LjAzOSwxMC42MDUgMjEuNDI0LDUuNzUgIi8+PC9nPjwvc3ZnPg=='); }
 .tools .sm {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyM3B4IiBoZWlnaHQ9IjIzcHgiIHZpZXdCb3g9IjAgMCAyMyAyMyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjMgMjMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwYXRoIGZpbGw9IiNFOTBFOEIiIGQ9Ik0yMi41LDQuNTg1Yy0wLjgxLDAuMzY1LTEuNjgsMC42MDgtMi41OTMsMC43MmMwLjkzMy0wLjU2NSwxLjY0Ny0xLjQ2MywxLjk4NS0yLjUzYy0wLjg3MiwwLjUyNC0xLjgzOCwwLjkwNC0yLjg2NiwxLjEwOWMtMC44MjMtMC44ODktMS45OTctMS40NDUtMy4yOTUtMS40NDVjLTIuNDkyLDAtNC41MTMsMi4wNDktNC41MTMsNC41NzVjMCwwLjM1OCwwLjA0LDAuNzA3LDAuMTE2LDEuMDQyYy0zLjc1LTAuMTkxLTcuMDc2LTIuMDExLTkuMzAyLTQuNzhjLTAuMzksMC42NzUtMC42MTIsMS40NjMtMC42MTIsMi4zYzAsMS41ODYsMC43OTgsMi45ODYsMi4wMDksMy44MDZjLTAuNzQxLTAuMDIzLTEuNDM3LTAuMjI5LTIuMDQ0LTAuNTdjMCwwLjAxOCwwLDAuMDM3LDAsMC4wNTZjMCwyLjIxNywxLjU1NCw0LjA2NSwzLjYyLDQuNDg3Yy0wLjM3OSwwLjEwNC0wLjc3OCwwLjE2MS0xLjE4OSwwLjE2MWMtMC4yOTIsMC0wLjU3NC0wLjAyOS0wLjg1LTAuMDgyYzAuNTc0LDEuODE1LDIuMjQxLDMuMTM5LDQuMjE3LDMuMTc1Yy0xLjU0NSwxLjIyOC0zLjQ5MiwxLjk2LTUuNjA2LDEuOTZjLTAuMzY0LDAtMC43MjMtMC4wMjItMS4wNzctMC4wNjRjMS45OTgsMS4yOTgsNC4zNjksMi4wNTQsNi45MTksMi4wNTRjOC4zMDEsMCwxMi44NDItNi45NywxMi44NDItMTMuMDE1YzAtMC4xOTgtMC4wMDUtMC4zOTUtMC4wMTItMC41OTJDMjEuMTMsNi4zMDgsMjEuODk1LDUuNTAzLDIyLjUsNC41ODVMMjIuNSw0LjU4NXogTTIyLjUsNC41ODUiLz48L2c+PC9zdmc+'); }
+
+.codigo {
+  background: white;
+  padding: 30px 20px; }
+  .codigo p {
+    font-size: 14px; }
+  .codigo ul {
+    margin-left: 15px; }
+  .codigo li {
+    list-style: none;
+    margin-bottom: 15px; }
+  .codigo code {
+    margin-left: 15px; }
+
+.datos h2 {
+  font-family: 'Geomanist', Helvetica, Arial, sans-serif;
+  border-bottom: 1px solid #cccccc;
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  text-align: center; }
+
+.usa_datos {
+  margin-left: 25px; }
+  .usa_datos li {
+    list-style: none; }
+    .usa_datos li a {
+      display: block;
+      margin-bottom: 18px;
+      padding-left: 28px;
+      position: relative; }
+      .usa_datos li a.current, .usa_datos li a:hover {
+        color: #eb008b; }
+        .usa_datos li a.current:before, .usa_datos li a.current:after, .usa_datos li a:hover:before, .usa_datos li a:hover:after {
+          -webkit-opacity: 1;
+          -moz-opacity: 1;
+          opacity: 1; }
+      .usa_datos li a:before, .usa_datos li a:after {
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+        content: "";
+        display: inline-block;
+        position: absolute;
+        -webkit-opacity: 0.5;
+        -moz-opacity: 0.5;
+        opacity: 0.5; }
+      .usa_datos li a:before {
+        background: white;
+        border: 3px solid #eb008b;
+        height: 15px;
+        width: 15px;
+        left: 0; }
+      .usa_datos li a:after {
+        background: #eb008b;
+        height: 11px;
+        width: 11px;
+        left: 5px;
+        top: 5px; }
 
 /* =BTN 
 -------------------------------------------------------------- */
