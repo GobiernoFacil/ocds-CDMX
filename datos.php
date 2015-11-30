@@ -32,12 +32,12 @@
 					
 					<!-- usar nav-->
 					<ul class="usa_datos">
-						<li><a href="#" class="current">Listar contratos</a></li>
-						<li><a href="#">Catálogo de Dependencias</a></li>
-						<li><a href="#">Catálogo de Proveedores</a></li>
-						<li><a href="#">Servicio Web Contrato</a></li>
+						<li><a href="#" id="btn-listar-contratos" class="current">Listar contratos</a></li>
+						<li><a href="#"	id="btn-dependencias">Catálogo de Dependencias</a></li>
+						<li><a href="#"	id="btn-proveedores">Catálogo de Proveedores</a></li>
+						<li><a href="#"	id="btn-web-service">Servicio Web Contrato</a></li>
 					</ul>
-					<a href="#" class="btn default">Más info sobre el estándar</a>
+					<a href="http://ocds.open-contracting.org/standard/r/1__0__0/en/standard/intro/" class="btn default">Más información del Estándar de Contrataciones Abiertas</a>
 				</div>
 				<div class="col-sm-6">
 					<div class="codigo">
