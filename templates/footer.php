@@ -54,9 +54,12 @@
   ga('send', 'pageview');
 
 	</script>
-	
+	<?php if( $body_class=="home") :?>
 	<script data-main="js/main" src="js/bower_components/requirejs/require.js"></script>
-	
+	<?php endif;?>
+	<?php if( $body_class=="datos") :?>
+	<script data-main="js/main_datos" src="js/bower_components/requirejs/require.js"></script>
+	<?php endif;?>
 	
 </body>
 </html>
