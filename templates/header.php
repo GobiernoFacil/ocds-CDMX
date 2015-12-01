@@ -51,8 +51,8 @@
 				</div>
 				<div class="col-sm-3">
 					<ul>
-						<li><a href="#">¿Qué son?</a></li>
-						<li><a href="#">Datos</a></li>
+						<li><a href="index.php">¿Qué son?</a></li>
+						<li><a href="datos.php">Datos</a></li>
 						<li><a href="#">¿Quiénes Participan?</a></li>
 					</ul>
 				</div>
