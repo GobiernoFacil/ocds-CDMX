@@ -837,6 +837,9 @@ div {
   height: 30px;
   width: 183px; }
 
+:focus {
+  outline: none; }
+
 section {
   padding-top: 190px;
   padding-bottom: 210px; }
