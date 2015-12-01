@@ -37,7 +37,7 @@
 </div>	
 
 <div class="col-sm-12">
-	<a href="#" class="btn">Descubre como  usar los datos</a>
+	<a href="datos.php" class="btn">Descubre como  usar los datos</a>
 </div>
 <div class="col-sm-4 col-sm-offset-8">
 	<p><small>* En la primera fase del proyecto el sitio solo contará con contrataciones de SEFIN, correspondientes a noviembre de 2015</small></p>
