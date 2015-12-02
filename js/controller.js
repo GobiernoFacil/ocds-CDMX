@@ -32,6 +32,9 @@ define(function(require){
   // --------------------------------------------------------------------------------
   //
 
+  // MOBILE
+  MenuMobile = document.querySelector("#menu-mobile");
+  
   // STEPS
   Planning = document.querySelector(".slide.e-1.planeacion"),
   Bidding  = document.querySelector(".slide.e-2.licitacion"),
@@ -83,6 +86,10 @@ define(function(require){
 
   var controller =  Backbone.View.extend({
     events : {
+      // MOBILE
+      "click .bento_menu" : "show_mobile_menu",
+      "click .close" 	  : "hide_mobile_menu",
+      
       // NAVIGATION
       "click .cta" : "move_to_second",
       "click #goto-step1" : "move_to_first",
@@ -256,7 +263,17 @@ define(function(require){
     // L O C A L   T R A N S I T I O N S
     // --------------------------------------------------------------------------------
     //
-
+	
+	show_mobile_menu : function(e) {
+		e.preventDefault();
+		MenuMobile.style.display = "block";
+	},
+	
+	hide_mobile_menu : function(e) {
+		e.preventDefault();
+		MenuMobile.style.display = "none";
+	},
+	
     show_planning : function(e){
       e.preventDefault();
       Planning.style.display       = "block";
