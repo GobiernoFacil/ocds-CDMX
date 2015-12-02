@@ -1472,10 +1472,16 @@ footer {
     float: right; }
   .nav_links, #menu_scroll {
     display: none; }
+  .datos_pa_labanda a.btn.default {
+    display: inline-block;
+    height: auto;
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 25px; }
   section {
     padding-top: 120px;
     padding-bottom: 130px; }
-  .participacion h1, .etapas h1, .win h1, .tools h1 {
+  .lead.datos h1, .participacion h1, .etapas h1, .win h1, .tools h1, .datos_pa_labanda h1 {
     font-size: 1.7em; }
   .win .quote p, .win .quote p strong {
     font-size: 15px; }
@@ -1485,7 +1491,7 @@ footer {
     line-height: 35px;
     margin: 40px auto 0;
     width: 180px; }
-  div {
+  div, .datos_pa_labanda p {
     font-size: 13px;
     line-height: 1.5; }
   .stages li {
