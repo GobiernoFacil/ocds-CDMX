@@ -32,6 +32,9 @@ define(function(require){
   // --------------------------------------------------------------------------------
   //
 
+  // MOBILE
+  MenuMobile = document.querySelector("#menu-mobile"),
+  
   // STEPS
   Planning = document.querySelector(".slide.e-1.planeacion"),
   Bidding  = document.querySelector(".slide.e-2.licitacion"),
@@ -83,6 +86,10 @@ define(function(require){
 
   var controller =  Backbone.View.extend({
     events : {
+      // MOBILE
+      "click .bento_menu" : "show_mobile_menu",
+      "click .close" 	  : "hide_mobile_menu",
+      
       // NAVIGATION
       "click .cta" : "move_to_second",
       "click #goto-step1" : "move_to_first",
@@ -256,7 +263,17 @@ define(function(require){
     // L O C A L   T R A N S I T I O N S
     // --------------------------------------------------------------------------------
     //
-
+	
+	show_mobile_menu : function(e) {
+		e.preventDefault();
+		MenuMobile.style.display = "block";
+	},
+	
+	hide_mobile_menu : function(e) {
+		e.preventDefault();
+		MenuMobile.style.display = "none";
+	},
+	
     show_planning : function(e){
       e.preventDefault();
       Planning.style.display       = "block";
@@ -278,6 +295,7 @@ define(function(require){
       Implementation.style.display = "none";
       $("a.nav_stage").removeClass("current");
       $("#link_nav_licitacion").addClass("current");
+      this.animate_bidding();
     },
 
     show_award : function(e){
@@ -289,6 +307,7 @@ define(function(require){
       Implementation.style.display = "none";
       $("a.nav_stage").removeClass("current");
       $("#link_nav_adjudicacion").addClass("current");
+      this.animate_award();
     },
 
     show_contract : function(e){
@@ -300,6 +319,7 @@ define(function(require){
       Implementation.style.display = "none";
       $("a.nav_stage").removeClass("current");
       $("#link_nav_contratacion").addClass("current");
+      this.animate_contract();
     },
 
     show_implementation : function(e){
@@ -311,6 +331,7 @@ define(function(require){
       Implementation.style.display = "block";
       $("a.nav_stage").removeClass("current");
       $("#link_nav_implementacion").addClass("current");
+      this.animate_implementation();
     },
 
     show_viz : function(e){
@@ -367,28 +388,33 @@ define(function(require){
     },
 
     animate_planning : function(){
-      var m = new TimelineMax();
-      m.add(TweenMax.from(document.querySelectorAll(".slide.e-1.planeacion"), 1, {opacity : 0}));
+      var m         = new TimelineMax();
+      m.add(TweenMax.from(".slide.e-1.planeacion", .6, {opacity : 0}));
+      m.staggerFrom(".slide.e-1.planeacion .description", .5, {opacity:0}, .1, "+=0");
     },
 
     animate_bidding : function(){
       var m = new TimelineMax();
-      m.add(TweenMax.from(document.querySelectorAll(".slide.e-2.licitacion"), 1, {opacity : 0}));
+      m.add(TweenMax.from(document.querySelectorAll(".slide.e-2.licitacion"), .6, {opacity : 0}));
+      m.staggerFrom(".slide.e-2.licitacion .description", .5, {opacity:0, scale:0}, .1, "+=0");
     },
 
     animate_award : function(){
-      var m = new TimelineMax();
-      m.add(TweenMax.from(document.querySelectorAll(".slide.e-2.adjudicacion"), 1, {opacity : 0}));
+      var m       = new TimelineMax();
+      m.add(TweenMax.from(".slide.e-2.adjudicacion", .6, {opacity : 0}));
+      m.staggerFrom(".slide.e-2.adjudicacion .description", .5, {opacity:0}, .1, "+=0");
     },
 
     animate_contract : function(){
       var m = new TimelineMax();
-      m.add(TweenMax.from(document.querySelectorAll(".slide.e-2.contrato"), 1, {opacity : 0}));
+      m.add(TweenMax.from(document.querySelectorAll(".slide.e-2.contrato"), .6, {opacity : 0}));
+      m.staggerFrom(".slide.e-2.contrato .description", .5, {opacity:0}, .1, "+=0");
     },
 
     animate_implementation : function(){
       var m = new TimelineMax();
-      m.add(TweenMax.from(document.querySelectorAll(".slide.e-2.planeacion"), 1, {opacity : 0}));
+      m.add(TweenMax.from(document.querySelectorAll(".slide.e-2.implementacion"), .6, {opacity : 0}));
+      m.staggerFrom(".slide.e-2.implementacion .description", .5, {opacity:0}, .1, "+=0");
     }
   });
 

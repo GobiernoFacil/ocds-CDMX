@@ -1,7 +1,7 @@
 <div class="col-sm-8 col-sm-offset-2">
 	<h1>¿Qué más podrás hacer con  las <span>contrataciones abiertas</span>* de la CD<strong>MX</strong>?</h1>
 </div>
-<div class="col-sm-8 col-sm-offset-2 slide">
+<div class="col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 slide">
 	<div class="row" id="tools-visualize">
 		<div class="col-sm-5">
 			<?php echo file_get_contents("img/dataviz.svg"); ?>	
@@ -37,8 +37,8 @@
 </div>	
 
 <div class="col-sm-12">
-	<a href="#" class="btn">Descubre como  usar los datos</a>
+	<a href="datos.php" class="btn">Descubre como  usar los datos</a>
 </div>
-<div class="col-sm-4 col-sm-offset-8">
+<div class="col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-8">
 	<p><small>* En la primera fase del proyecto el sitio solo contará con contrataciones de SEFIN, correspondientes a noviembre de 2015</small></p>
 </div>
