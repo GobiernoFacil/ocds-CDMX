@@ -901,8 +901,8 @@ nav#menu {
     border-bottom: 3px solid white;
     text-align: left; }
   #menu-mobile .close {
-    background: white;
-    color: black;
+    background: #eb008b;
+    color: white;
     font-weight: 600;
     margin-left: 30px;
     padding: 1px 5px;
