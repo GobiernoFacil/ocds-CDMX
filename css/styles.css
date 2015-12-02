@@ -959,7 +959,7 @@ nav#menu {
   position: fixed;
   right: 0;
   width: 190px;
-  z-index: 99999999999; }
+  z-index: 888888; }
   #countdown p {
     margin: 0; }
   #countdown small {
@@ -1494,6 +1494,13 @@ footer {
     font-size: 14px;
     line-height: 1.2;
     margin-bottom: 25px; }
+  #countdown {
+    padding: 2px 0;
+    width: 100%;
+    text-align: center;
+    top: 60px; }
+    #countdown p, #countdown .number {
+      font-size: 12px; }
   section {
     padding-top: 120px;
     padding-bottom: 130px; }
