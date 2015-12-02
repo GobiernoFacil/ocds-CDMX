@@ -63,6 +63,9 @@ define(function(require){
       "click #btn-dependencias"     : "show_agencies",
       "click #btn-proveedores"      : "show_suppliers",
       "click #btn-web-service"      : "show_webservice",
+      
+      // NAVIGATION
+      "click .cta" : "move_to_second",
     },
 
     el : "body",
@@ -74,17 +77,44 @@ define(function(require){
 
     initialize : function(){
       this.hide_stuff();
+      this.set_animation_controller();
     },
 
-
+	set_animation_controller : function(){
+      this.animation = new ScrollMagic.Controller();
+      this.set_first_scene();
+      this.set_second_scene();
+    },
+    
+    
     hide_stuff : function(){
       AgenciesCatalog.style.display = "none";
       SuppliersCatalog.style.display = "none";
       WebService.style.display = "none";
     },
-
-
-
+	
+	set_first_scene : function(){
+      var that = this;
+      this.scene1 = new ScrollMagic.Scene({
+        triggerElement : ".lead.datos .container",
+        duration : 400,
+        //offset : -160
+      })
+      //.setTween(tl)
+      //.setPin(".participacion")
+      .addTo(this.animation)
+    },
+	
+	set_second_scene : function(){
+      var that = this;
+      this.scene2 = new ScrollMagic.Scene({
+        triggerElement : ".datos_pa_labanda .container",
+        duration : 300,
+        offset : -100
+      })
+      .addTo(this.animation)
+    },
+	
 
     //
     // L O C A L   T R A N S I T I O N S
@@ -140,7 +170,18 @@ define(function(require){
       $(".usa_datos a").removeClass("current");
       $('#btn-web-service').addClass("current");
     },
-
+	
+	 move_to_first : function(e){
+      if(e) e.preventDefault(); 
+      var y = this.scene1.triggerPosition();
+      TweenMax.to(window, 1, {scrollTo:{y: y}, ease:Power2.easeOut});
+    },
+    
+	 move_to_second : function(e){
+      if(e) e.preventDefault(); 
+      var y = this.scene2.triggerPosition();
+      TweenMax.to(window, 1, {scrollTo:{y: y}, ease:Power2.easeOut});
+    },
    
     
   });
