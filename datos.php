@@ -5,7 +5,6 @@
 	$og_image		= "img/og/datos-contrataciones-abiertas-cdmx.png";
 	$canonical		= $url;
 	include "templates/header.php";?>
-	
 	<!--datos-->
 	<section class="lead datos">
 		<div class="container">

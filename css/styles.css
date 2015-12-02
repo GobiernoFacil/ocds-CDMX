@@ -951,6 +951,22 @@ nav#menu {
       background: rgba(255, 255, 255, 0.9);
       border: 2px solid rgba(0, 0, 0, 0.7); }
 
+#countdown {
+  background: #0cabb8;
+  color: white;
+  top: 90px;
+  padding: 10px;
+  position: fixed;
+  right: 0;
+  width: 190px;
+  z-index: 99999999999; }
+  #countdown p {
+    margin: 0; }
+  #countdown small {
+    font-size: 12px; }
+  #countdown .number {
+    font-size: 13px; }
+
 /* =Participacion / datos
 -------------------------------------------------------------- */
 .participacion, .lead.datos {
