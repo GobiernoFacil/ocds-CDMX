@@ -62,3 +62,17 @@
 			</div>
 		</div>
 	</nav>
+	<nav id="menu-mobile">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<h3>Menú <a href="#" class="close">X</a></h3>
+					<ul>
+						<li><a href="index.php">¿Qué son?</a></li>
+						<li><a href="datos.php">Datos</a></li>
+						<li><a href="#">¿Quiénes Participan?</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
