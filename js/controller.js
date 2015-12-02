@@ -231,25 +231,25 @@ define(function(require){
     enter_first : function(){
       $("#menu_scroll a").removeClass("current");
       $("#goto-step1").addClass("current");
-      this.router.navigate("");
+      //this.router.navigate("");
     },
 
     enter_second : function(){
       $("#menu_scroll a").removeClass("current");
       $("#goto-step2").addClass("current");
-      this.router.navigate("estandar");
+      //this.router.navigate("estandar");
     },
 
     enter_third : function(){
       $("#menu_scroll a").removeClass("current");
       $("#goto-step3").addClass("current");
-      this.router.navigate("todos-ganamos");
+      //this.router.navigate("todos-ganamos");
     },
 
     enter_fourth : function(){
       $("#menu_scroll a").removeClass("current");
       $("#goto-step4").addClass("current");
-      this.router.navigate("que-hacer");
+      //this.router.navigate("que-hacer");
     },
 
     //
