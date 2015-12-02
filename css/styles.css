@@ -1318,7 +1318,10 @@ div.forthewin {
 .datos_pa_labanda a.btn.default {
   background: #0cabb8;
   color: white;
-  padding: 10px; }
+  padding: 10px;
+  display: inline-block;
+  height: auto;
+  line-height: 1.3; }
   .datos_pa_labanda a.btn.default:hover {
     background: #444; }
 
@@ -1618,11 +1621,25 @@ footer {
         float: none;
         margin: 5px auto; } }
 
-@media screen and (min-width: 768px) and (max-width: 991px) { }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .mobile {
+    display: block; }
+  .nav_links {
+    display: none; }
+  section {
+    padding-top: 120px;
+    padding-bottom: 130px; }
+  .stages li {
+    width: 19%; } }
 
 @media screen and (max-width: 992px) { }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) { }
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  nav#menu ul li {
+    font-size: 11px;
+    margin-left: 4px; }
+  .stages li {
+    width: 19.2%; } }
 
 /* =Print
 ----------------------------------------------- */
