@@ -32,6 +32,8 @@ define(function(require){
   // --------------------------------------------------------------------------------
   //
 
+  // MOBILE
+  MenuMobile = document.querySelector("#menu-mobile"),
   
   ///DATA
   ListContract    	 = document.querySelector("#listar-contratos"),
@@ -51,8 +53,10 @@ define(function(require){
 
   var controller =  Backbone.View.extend({
     events : {
-      // NAVIGATION
-
+      
+      // MOBILE
+      "click .bento_menu" : "show_mobile_menu",
+      "click .close" 	  : "hide_mobile_menu",
 
       // DATA
       "click #btn-listar-contratos" : "show_list",
@@ -86,7 +90,17 @@ define(function(require){
     // L O C A L   T R A N S I T I O N S
     // --------------------------------------------------------------------------------
     //
-
+	
+	show_mobile_menu : function(e) {
+		e.preventDefault();
+		MenuMobile.style.display = "block";
+	},
+	
+	hide_mobile_menu : function(e) {
+		e.preventDefault();
+		MenuMobile.style.display = "none";
+	},
+	
     show_list : function(e){
       e.preventDefault();
       ListContract.style.display       = "block";

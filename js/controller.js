@@ -33,7 +33,7 @@ define(function(require){
   //
 
   // MOBILE
-  MenuMobile = document.querySelector("#menu-mobile");
+  MenuMobile = document.querySelector("#menu-mobile"),
   
   // STEPS
   Planning = document.querySelector(".slide.e-1.planeacion"),
