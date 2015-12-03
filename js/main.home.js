@@ -12,9 +12,9 @@ if(today < beta){
     html = "<p>" 
       +"<strong>" + timespan.months + "</strong> mes "
       +"<strong>" + timespan.days + "</strong> días "
-      +"(<span class='number'>" + timespan.hours + "</span>:"
-      +"<span class='number'>" + timespan.minutes + "</span>:"
-      +"<span class='number'>" + timespan.seconds + "</span>)<br>"
+      +"(<span class='number'>" + (timespan.hours < 10 ? "0" + String(timespan.hours) : timespan.hours) + "</span>:"
+      +"<span class='number'>" + (timespan.minutes < 10 ? "0" + String(timespan.minutes) : timespan.minutes) + "</span>:"
+      +"<span class='number'>" + (timespan.seconds < 10 ? "0" + String(timespan.seconds) : timespan.seconds) + "</span>)<br>"
       +"<small>para ver los primeros datos</small></p>";
     clock.innerHTML = html;
 
