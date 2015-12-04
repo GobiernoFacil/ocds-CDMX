@@ -56,7 +56,6 @@
 					<ul class="nav_links">
 						<li><a href="index.php">¿Qué son?</a></li>
 						<li><a href="datos.php">Datos</a></li>
-						<li><a href="#">¿Quiénes Participan?</a></li>
 					</ul>
 				</div>
 			</div>
