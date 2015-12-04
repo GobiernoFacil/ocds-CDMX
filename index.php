@@ -34,12 +34,12 @@
 					<h1>La <span>CD</span><strong>MX</strong> es la <span>primer ciudad del mundo</span> en implementar el 
 						<a href="http://standard.open-contracting.org/?lang=es">Estándar de Contrataciones Abiertas</a></h1>
 					
-					<div id="mini-description-a" style="opacity:0">Con el <strong>Estándar de Contrataciones Abiertas</strong>, ahora los contratos públicos se 
-					liberarán desde la etapa de planeación hasta su ejecución, permitiéndote dar seguimiento al 
-					gasto de fondos públicos y mejorar la prestación de servicios.</div>
+					<div id="mini-description-a" style="opacity:0">Con el <strong>Estándar de Contrataciones Abiertas</strong>, ahora los contratos públicos se liberarán desde la etapa de planeación hasta su ejecución, permitiéndote dar seguimiento al gasto de fondos públicos y mejorar la prestación de servicios.</div>
 
 					<!-- stage nav-->
 					<?php include "includes/contrataciones/stages_nav.php";?>
+						<a href="glosario.php" class="btn">Consulta el Glosario para conocer más sobre Contrataciones Abiertas</a>
+
 				</div>
 				<div class="col-sm-6 pasos">
 					<!-- planeación -->

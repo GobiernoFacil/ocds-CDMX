@@ -1044,6 +1044,15 @@ code {
   font-family: 'Stilu', Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.5; }
+.etapas a.btn, .datos_pa_labanda a.btn {
+  background: #0cabb8;
+  color: white;
+  padding: 10px;
+  height: auto;
+  line-height: 1.2;
+  display: block;
+  margin: 70px 0 0;
+  width: 90%; }
 
 /* =stages  */
 .stages {
