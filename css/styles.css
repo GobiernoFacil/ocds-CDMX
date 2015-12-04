@@ -870,6 +870,10 @@ nav#menu {
     font-size: 16px;
     padding-top: 6px;
     text-align: center; }
+    nav#menu h1 a {
+      color: #404040; }
+      nav#menu h1 a:hover {
+        color: #777; }
   nav#menu ul {
     padding-top: 6px;
     text-align: right; }
