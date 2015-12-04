@@ -847,6 +847,11 @@ section {
 small {
   font: 400 12px/1.2 'Geomanist', Helvetica, Arial, sans-serif; }
 
+.divider {
+  padding: 25px 0;
+  margin: 25px 0;
+  display: block; }
+
 /* =Menu 
 -------------------------------------------------------------- */
 nav#menu {
@@ -1319,6 +1324,15 @@ div.forthewin {
       font-family: monospace;
       margin-left: 15px;
       display: block; }
+
+.glosario .codigo {
+  padding: 70px 0 90px; }
+  .glosario .codigo ul {
+    margin: 20px 35px; }
+  .glosario .codigo li {
+    list-style: disc; }
+    .glosario .codigo li ul {
+      margin-left: 30px; }
 
 .datos_pa_labanda h2 {
   font-family: 'Geomanist', Helvetica, Arial, sans-serif;
