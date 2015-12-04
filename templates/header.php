@@ -47,15 +47,14 @@
 				<h2 class="cdmx">CDMX | SEFIN</h2>
 				</div>
 				<div class="col-xs-6 col-sm-6">
-					<h1>CONTRATACIONES <strong>ABIERTAS</strong></h1>
+					<h1><a href="index.php">CONTRATACIONES <strong>ABIERTAS</strong></a></h1>
 				</div>
 				<div class="col-xs-3 col-sm-3">
 					<div class="mobile">
 						<a href="#" class="bento_menu"></a>
 					</div>
 					<ul class="nav_links">
-						<li><a href="index.php">¿Qué son?</a></li>
-						<li><a href="datos.php">Datos</a></li>
+						<li><a href="datos.php">Usa los Datos</a></li>
 					</ul>
 				</div>
 			</div>
