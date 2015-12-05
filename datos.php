@@ -28,6 +28,7 @@
 					<h1>¿Cómo utilizar los datos?</h1>
 					<p>El uso de un Estándar de Datos para las Contrataciones Abiertas ayudará a reducir la corrupción en el proceso de contratación, permitiendo a los gobiernos conseguir una mejor rentabilidad de sus inversiones y asegurar la producción de bienes y servicios de alta calidad para los ciudadanos.
 					</p>
+					<p>El Estándar de Datos le dará a los interesados acceso a datos vinculados, permitiéndoles usar los datos sobre contrataciones de una forma más efectiva.</p>
 					
 					<!-- usar nav-->
 					<ul class="usa_datos">
