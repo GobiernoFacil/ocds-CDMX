@@ -41,7 +41,7 @@
 								<h2>¿Qué es OCDS?</h2>
 								<p>El proyecto (OCDS) es un estándar internacional que  formaliza la publicación de manera accesible y estructura la cantidad de datos y documentos relacionados a un proceso de contratación en cada una de sus fases de planeación, licitación, la adjudicación,  la contratación y la implementación (seguimiento al contrato).</p>
 								<ul>
-								<li>Fase de Planeación: Describe los antecedentes de un proceso de contratación de un bien o servicio, fase donde se define el presupuesto para el proceso de contratación.
+								<li><strong>Fase de Planeación</strong>: Describe los antecedentes de un proceso de contratación de un bien o servicio, fase donde se define el presupuesto para el proceso de contratación.
 									<ul>
 										<li>Elementos generales de esta sección:
 											<ul>
@@ -53,7 +53,7 @@
 										</li>
 									</ul>
 								</li>
-								<li>Fase de Licitación: Fase donde se indican  los bienes o servicios que se desean adquirir por la dependencia así como los  monto de dichos  bienes o servicios, periodos del proceso de contratación y las empresas participantes al proceso de contratación.
+								<li><strong>Fase de Licitación</strong>: Fase donde se indican  los bienes o servicios que se desean adquirir por la dependencia así como los  monto de dichos  bienes o servicios, periodos del proceso de contratación y las empresas participantes al proceso de contratación.
 								<ul>
 									<li>Elementos generales de esta sección:
 									<ul>
@@ -68,7 +68,7 @@
 									</li>
 								</ul>
 								</li>
-								<li>Adjudicación: Fase en la que se designa a la empresa participante ganadora  del proceso de contratación y los bienes o servicios adjudicados.
+								<li><strong>Adjudicación</strong>: Fase en la que se designa a la empresa participante ganadora  del proceso de contratación y los bienes o servicios adjudicados.
 									<ul>
 										<li>Elementos generales de esta sección:
 										<ul>
@@ -79,7 +79,7 @@
 										</li>
 									</ul>
 								</li>	
-								<li>Contrato: Fase en la que se celebra la firma del contrato entre la empresa participante ganadora y el gobierno de la ciudad de México.
+								<li><strong>Contrato</strong>: Fase en la que se celebra la firma del contrato entre la empresa participante ganadora y el gobierno de la ciudad de México.
 								<ul>
 									<li>Elementos generales de esta sección:
 										<ul>
@@ -92,7 +92,7 @@
 								</ul>
 								</li>
 								<li>
-									Implementación: Fase que da seguimiento a todo el proceso posterior a  la firma de contrato.
+									<strong>Implementación</strong>: Fase que da seguimiento a todo el proceso posterior a  la firma de contrato.
 								</li>
 							</ul>
 							
@@ -102,12 +102,14 @@
 Datos abiertos gubernamentales
 Generalmente se entienden como tales los datos recopilados durante la ejecución operativa normal, siempre que no identifique a individuos particulares ni entre en conflicto con cuestiones sensibles en materia mercantil. </p>
 							<div class="divider"></div>
-
+							
+							<a name="gobierno-abierto"></a>
 							<h2>Gobierno Abierto</h2>
-							<p>“...es aquel que entabla una constante conversación con los ciudadanos con el fin de oír lo que ellos dicen y solicitan, que toma decisiones basadas en sus necesidades y preferencias, que facilita la colaboración de los ciudadanos y funcionarios en el desarrollo de los servicios que presta y que comunica todo lo que decide y hace de forma abierta y transparente” (Calderón y Lorenzo, 11).</p>
+							<p>“Aquel que entabla una constante conversación con los ciudadanos con el fin de oír lo que ellos dicen y solicitan, que toma decisiones basadas en sus necesidades y preferencias, que facilita la colaboración de los ciudadanos y funcionarios en el desarrollo de los servicios que presta y que comunica todo lo que decide y hace de forma abierta y transparente.” <sup><a href="#gobierno-abierto-ref">1</a></sup></p>
 
+							<a name="componentes"></a>
 							<div class="divider"></div>
-							<h2>3 componentes del Gobierno Abierto</h2>
+							<h2>3 componentes del Gobierno Abierto <sup><a href="#componentes-ref">2</a></sup></h2>
 							<ul>
 								<li><h3>Transparencia</h3>
 								Promueve la rendición de cuentas al proporcionar al público información acerca de lo que el Gobierno está haciendo (White House Memo)</li>
@@ -119,7 +121,20 @@ Generalmente se entienden como tales los datos recopilados durante la ejecución
 								<p>Mejora la eficacia de Gobierno mediante el fomento de asociaciones y la cooperación dentro del Gobierno, a través de los niveles de gobierno, así como entre las instituciones gubernamentales y privadas (White House Memo)</p>
 								</li>
 							</ul>
+							
+							
+							<div class="divider"></div>
+							<h2>Referencias</h2>
+							<div class="ref">
+							<p>	<a name="gobierno-abierto-ref"></a>
+							<sup><a href="#gobierno-abierto">1</a></sup> Calderón, César y Lorenzo, Sebastián (coords.). (2010). Open Government - Gobierno Abierto. Alcalá: Algón Editores.</p>
+							<p>	<a name="componentes-ref"></a>
+							<sup><a href="#componentes">2</a></sup> Osrag, Peter R. (2009). Memorandum for the heads of executive departments and agencies. (Memorándum inédito). Oficina de Gestión y Presupuesto. Washington. D.C., E.E.U.U.
+</p>
 							</div>
+						</div>
+							
+							
 					</div>
 				</div>	
 			</div>

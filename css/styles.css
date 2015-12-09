@@ -847,6 +847,15 @@ section {
 small {
   font: 400 12px/1.2 'Geomanist', Helvetica, Arial, sans-serif; }
 
+sup {
+  font-size: 12px;
+  font-weight: 700; }
+  sup a:link, sup a:visited {
+    color: #eb008b;
+    border-bottom: 1px solid #eb008b; }
+    sup a:link:hover, sup a:visited:hover {
+      color: #0cabb8; }
+
 .divider {
   padding: 25px 0;
   margin: 25px 0;
@@ -1330,9 +1339,20 @@ div.forthewin {
   .glosario .codigo ul {
     margin: 20px 35px; }
   .glosario .codigo li {
-    list-style: disc; }
+    list-style: disc;
+    font-size: 14px; }
     .glosario .codigo li ul {
-      margin-left: 30px; }
+      margin-left: 30px;
+      margin-bottom: 40px; }
+      .glosario .codigo li ul li {
+        margin-bottom: 10px; }
+  .glosario .codigo .ref {
+    margin-left: 20px;
+    color: #777;
+    font-size: 13px; }
+    .glosario .codigo .ref sup {
+      display: inline-block;
+      width: 10px; }
 
 .datos_pa_labanda h2 {
   font-family: 'Geomanist', Helvetica, Arial, sans-serif;
