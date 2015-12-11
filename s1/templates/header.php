@@ -11,6 +11,7 @@
 	<title><?php echo !$title ? "" :  $title ;?></title>
 	<meta name="description" content="<?php echo !$description ? "" :  $description ;?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex">
 	<link rel="canonical" href="<?php echo !$canonical ? "" :  $canonical ;?>">		
 	<!-- FB-->
 	<meta property="og:title" content="<?php echo !$title ? "" :  $title ;?>"/>
