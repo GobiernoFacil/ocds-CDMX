@@ -21,6 +21,28 @@
   <span id="address-region"></span>
   CP.<span id="address-postalCode"></span>
 </p>
+<p id="total-awards-money"></p>
+<p id="total-awards-num"></p>
+
+<h3>Contratos con dependencias</h3>
+<ul id="contracts-by-office"></ul>
+
+<h3>Licitaciones más costosas adjudicadas</h3>
+<ul id="most-expensive-awards"></ul>
+
+<p>Todas las licitaciones: <span id="award-counter-filter"></span></p>
+<form>
+  <p>
+    <select name="filter" id="award-filter-select">
+      <option>Todas</option>
+      <option>A</option>
+      <option>B</option>
+    </select>
+  </p>
+</form>
+<ul id="awards-by-filter">
+  
+</ul>
 
 <script data-main="/js/apps/proveedor/main" src="js/bower_components/requirejs/require.js"></script>
 </body>
