@@ -27,7 +27,7 @@
 <p id="adjudicaciones-total-num"></p>
 <p id="gasto-promedio-money"></p>
 
-<div id="treemap">
+<div id="linemap">
   <h3>Total por contrato</h3>
   <p>información recopilada desde <span id="tremmap-data-from"></span></p>
 </div>
