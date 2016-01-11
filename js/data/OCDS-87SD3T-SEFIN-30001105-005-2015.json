@@ -1,0 +1,411 @@
+{
+    "uri": "http://innovacion.finanzas.df.gob.mx/OCDS/OCDS-87SD3T-SEFIN-30001105-005-2015.json",
+    "publishedDate": "2015-01-01T00:00:00.-06:00",
+    "publisher": {
+        "scheme": "http://innovacion.finanzas.df.gob.mx/ocds/ArchivoJSONDep/Dependencias.json",
+        "name": "CDMX-SEFIN",
+        "uri": "http://www.finanzas.df.gob.mx/",
+        "uid": "901"
+    },
+    "releases": [
+        {
+            "ocid": "OCDS-87SD3T-SEFIN-30001105-005-2015",
+            "id": "1",
+            "date": "2015-01-01T00:00:00.-06:00",
+            "tag": [
+                "contract"
+            ],
+            "initiationType": "tender",
+            "planning": {
+                "budget": {
+                    "amount": {
+                        "amount": 92000,
+                        "currency": "MXN"
+                    },
+                    "project": "suficiencia presupuestal 005"
+                },
+                "documents": []
+            },
+            "buyer": {
+                "identifier": {
+                    "id": "0901",
+                    "uri": "http://10.1.65.188/achavez/OCDS/ArchivoJSONDep/Dependencias.json"
+                },
+                "name": "SECRETARÿA DE FINANZAS (prueba)",
+                "address": {
+                    "streetAddress": "dr. lavista 144",
+                    "locality": "cuahtemoc",
+                    "region": "DF",
+                    "postalCode": "06720",
+                    "countryName": "MX"
+                },
+                "contactPoint": {
+                    "name": "pedro lara",
+                    "email": "No Capturado",
+                    "telephone": "No Capturado",
+                    "faxNumber": "No Capturado",
+                    "url": "No Capturado"
+                }
+            },
+            "tender": {
+                "id": "OCDS-87SD3T-SEFIN-30001105-005-2015",
+                "title": "ADQUISICION DE MATERIALES DE OFICINA 005",
+                "description": "COMPRA PAPELERIA SEFIN",
+                "status": "complete",
+                "items": [
+                    {
+                        "id": "1",
+                        "description": "CARPETA C/PERCALINA T/OFICIO(VA.COLORES)",
+                        "quantity": 400,
+                        "unit": {
+                            "name": "PZA"
+                        }
+                    },
+                    {
+                        "id": "2",
+                        "description": "CARPETA D/VINIL BCO T/CARTA D/2",
+                        "quantity": 300,
+                        "unit": {
+                            "name": "PZA"
+                        }
+                    },
+                    {
+                        "id": "3",
+                        "description": "CINTA ADHESIVA TRANSPARENTE 24MMX65MTS",
+                        "quantity": 3000,
+                        "unit": {
+                            "name": "ROL"
+                        }
+                    },
+                    {
+                        "id": "4",
+                        "description": "BROCHE TRIUNFO N.1 (MARIPOSA)",
+                        "quantity": 1300,
+                        "unit": {
+                            "name": "CS"
+                        }
+                    },
+                    {
+                        "id": "5",
+                        "description": "BROCHE TRIUNFO No. 2 (MARIPOSA)",
+                        "quantity": 1500,
+                        "unit": {
+                            "name": "CS"
+                        }
+                    },
+                    {
+                        "id": "6",
+                        "description": "BLOCK NOTAS AUTOADHERIBLES DE 3 X 3",
+                        "quantity": 600,
+                        "unit": {
+                            "name": "PZA"
+                        }
+                    }
+                ],
+                "value": {
+                    "amount": 92000,
+                    "currency": "MXN"
+                },
+                "procurementMethod": "open",
+                "awardCriteria": "bestValueToGovernment",
+                "submissionMethod": [
+                    "written"
+                ],
+                "tenderPeriod": {
+                    "startDate": "2015-01-15T00:00:00.-06:00",
+                    "endDate": "2015-01-15T00:00:00.-06:00"
+                },
+                "enquiryPeriod": {
+                    "startDate": "2015-01-13T00:00:00.-06:00",
+                    "endDate": "2015-01-13T00:00:00.-06:00"
+                },
+                "hasEnquiries": true,
+                "eligibilityCriteria": "CONDICIONES",
+                "awardPeriod": {
+                    "startDate": "2015-01-30T00:00:00.-06:00",
+                    "endDate": "2015-01-30T00:00:00.-06:00"
+                },
+                "numberOfTenderers": 2,
+                "tenderers": [
+                    {
+                        "identifier": {
+                            "id": "aar060308tt4",
+                            "uri": "http://10.1.65.188/achavez/OCDS/ArchivoJSONProv/Proveedores.json"
+                        },
+                        "name": "ABASTECEDORA ARAGONESA SA DE CV",
+                        "address": {
+                            "streetAddress": "AVENIDA DEL TALLER",
+                            "locality": "TRANSTIO                      CUAUHTEMOC",
+                            "region": "DF",
+                            "postalCode": "06820",
+                            "countryName": "MX"
+                        },
+                        "contactPoint": {
+                            "name": "juan garcia",
+                            "email": "gatvia@gmail.com",
+                            "telephone": "5556712376",
+                            "faxNumber": "No Capturado",
+                            "url": "No Capturado"
+                        }
+                    },
+                    {
+                        "identifier": {
+                            "id": "iioc680229dx5",
+                            "uri": "http://10.1.65.188/achavez/OCDS/ArchivoJSONProv/Proveedores.json"
+                        },
+                        "name": "CLAUDIA GABRIELA IÑIGUEZ OCHOA",
+                        "address": {
+                            "streetAddress": "MAR MEDITERRANEO",
+                            "locality": "POPOTLA                   MIGUEL HIDALGO",
+                            "region": "DF",
+                            "postalCode": "11400",
+                            "countryName": "MX"
+                        },
+                        "contactPoint": {
+                            "name": "gabriela iñiguez",
+                            "email": "No Capturado",
+                            "telephone": "No Capturado",
+                            "faxNumber": "No Capturado",
+                            "url": "No Capturado"
+                        }
+                    }
+                ],
+                "procuringEntity": {
+                    "identifier": {
+                        "id": "0901",
+                        "uri": "http://10.1.65.188/achavez/OCDS/ArchivoJSONDep/Dependencias.json"
+                    },
+                    "name": "SECRETARÿA DE FINANZAS (prueba)",
+                    "address": {
+                        "streetAddress": "dr. lavista 144",
+                        "locality": "cuahtemoc",
+                        "region": "DF",
+                        "postalCode": "06720",
+                        "countryName": "MX"
+                    },
+                    "contactPoint": {
+                        "name": "MARCOS M. HERRERÌA ALAMINA",
+                        "email": "mherrerias@finanzas.df.gob.mx",
+                        "telephone": "5551342500",
+                        "faxNumber": "No Capturado",
+                        "url": "5551342500"
+                    }
+                },
+                "documents": []
+            },
+            "awards": [
+                {
+                    "id": "1",
+                    "title": "ADQUISICION DE MATERIALES DE OFICINA 005",
+                    "description": "COMPRA PAPELERIA SEFIN",
+                    "status": "pending",
+                    "date": "2015-11-19T00:00:00.-06:00",
+                    "value": {
+                        "amount": 23304.4,
+                        "currency": "MXN"
+                    },
+                    "suppliers": [
+                        {
+                            "identifier": {
+                                "id": "AAR060308TT4",
+                                "uri": "http://10.1.65.188/achavez/OCDS/ArchivoJSONProv/Proveedores.json"
+                            },
+                            "name": "a",
+                            "address": {
+                                "streetAddress": "No Capturado",
+                                "locality": "No Capturado",
+                                "region": "No Capturado",
+                                "postalCode": "No Capturado",
+                                "countryName": "No Capturado"
+                            },
+                            "contactPoint": {
+                                "name": "No Capturado",
+                                "email": "No Capturado",
+                                "telephone": "No Capturado",
+                                "faxNumber": "No Capturado",
+                                "url": "No Capturado"
+                            }
+                        }
+                    ],
+                    "items": [
+                        {
+                            "id": "1",
+                            "description": "CARPETA C/PERCALINA T/OFICIO(VA.COLORES)",
+                            "quantity": 400,
+                            "unit": {
+                                "name": "PZA"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "description": "BROCHE TRIUNFO No. 2 (MARIPOSA)",
+                            "quantity": 1500,
+                            "unit": {
+                                "name": "CS"
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "description": "BLOCK NOTAS AUTOADHERIBLES DE 3 X 3",
+                            "quantity": 600,
+                            "unit": {
+                                "name": "PZA"
+                            }
+                        }
+                    ],
+                    "documents": []
+                },
+                {
+                    "id": "2",
+                    "title": "ADQUISICION DE MATERIALES DE OFICINA 005",
+                    "description": "COMPRA PAPELERIA SEFIN",
+                    "status": "pending",
+                    "date": "2015-11-19T00:00:00.-06:00",
+                    "value": {
+                        "amount": 23304.4,
+                        "currency": "MXN"
+                    },
+                    "suppliers": [
+                        {
+                            "identifier": {
+                                "id": "IIOC680229DX5",
+                                "uri": "http://10.1.65.188/achavez/OCDS/ArchivoJSONProv/Proveedores.json"
+                            },
+                            "name": "i",
+                            "address": {
+                                "streetAddress": "No Capturado",
+                                "locality": "No Capturado",
+                                "region": "No Capturado",
+                                "postalCode": "No Capturado",
+                                "countryName": "No Capturado"
+                            },
+                            "contactPoint": {
+                                "name": "No Capturado",
+                                "email": "No Capturado",
+                                "telephone": "No Capturado",
+                                "faxNumber": "No Capturado",
+                                "url": "No Capturado"
+                            }
+                        }
+                    ],
+                    "items": [
+                        {
+                            "id": "1",
+                            "description": "CARPETA C/PERCALINA T/OFICIO(VA.COLORES)",
+                            "quantity": 400,
+                            "unit": {
+                                "name": "PZA"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "description": "BROCHE TRIUNFO No. 2 (MARIPOSA)",
+                            "quantity": 1500,
+                            "unit": {
+                                "name": "CS"
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "description": "BLOCK NOTAS AUTOADHERIBLES DE 3 X 3",
+                            "quantity": 600,
+                            "unit": {
+                                "name": "PZA"
+                            }
+                        }
+                    ],
+                    "documents": []
+                }
+            ],
+            "contracts": [
+                {
+                    "id": "1",
+                    "awardID": "1",
+                    "title": "CS-018-2015",
+                    "description": "COMPRA PAPELERIA SEFIN",
+                    "status": "active",
+                    "period": {
+                        "startDate": "2015-07-01T00:00:00.-06:00",
+                        "endDate": "2015-12-31T00:00:00.-06:00"
+                    },
+                    "value": {
+                        "amount": 23304.4,
+                        "currency": "MXN"
+                    },
+                    "items": [
+                        {
+                            "id": "1",
+                            "description": "CARPETA C/PERCALINA T/OFICIO(VA.COLORES)",
+                            "quantity": 400,
+                            "unit": {
+                                "name": "PZA"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "description": "BROCHE TRIUNFO No. 2 (MARIPOSA)",
+                            "quantity": 1500,
+                            "unit": {
+                                "name": "CS"
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "description": "BLOCK NOTAS AUTOADHERIBLES DE 3 X 3",
+                            "quantity": 600,
+                            "unit": {
+                                "name": "PZA"
+                            }
+                        }
+                    ],
+                    "dateSigned": "2015-02-02T00:00:00.-06:00",
+                    "documents": []
+                },
+                {
+                    "id": "2",
+                    "awardID": "2",
+                    "title": "CS-018-2015",
+                    "description": "COMPRA PAPELERIA SEFIN",
+                    "status": "pending",
+                    "period": {
+                        "startDate": "2015-07-01T00:00:00.-06:00",
+                        "endDate": "2015-12-31T00:00:00.-06:00"
+                    },
+                    "value": {
+                        "amount": 23304.4,
+                        "currency": "MXN"
+                    },
+                    "items": [
+                        {
+                            "id": "1",
+                            "description": "BROCHE TRIUNFO No. 2 (MARIPOSA)",
+                            "quantity": 1500,
+                            "unit": {
+                                "name": "CS"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "description": "CARPETA C/PERCALINA T/OFICIO(VA.COLORES)",
+                            "quantity": 400,
+                            "unit": {
+                                "name": "PZA"
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "description": "BLOCK NOTAS AUTOADHERIBLES DE 3 X 3",
+                            "quantity": 600,
+                            "unit": {
+                                "name": "PZA"
+                            }
+                        }
+                    ],
+                    "dateSigned": "2015-02-02T00:00:00.-06:00",
+                    "documents": []
+                }
+            ],
+            "language": "es"
+        }
+    ]
+}
