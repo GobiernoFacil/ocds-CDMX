@@ -1471,6 +1471,40 @@ div.forthewin {
     .contract .info li span {
       padding: 0; }
 
+ul.timeline {
+  padding-top: 25px;
+  position: relative; }
+  ul.timeline:before {
+    background: #cacccc;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 49%;
+    border: 3px solid #e8eaea;
+    border-top: 0;
+    height: 100%;
+    width: 1px;
+    z-index: 0; }
+  ul.timeline li {
+    position: relative;
+    margin-bottom: 40px;
+    text-align: center; }
+    ul.timeline li ul {
+      margin-top: 40px; }
+      ul.timeline li ul li a {
+        background: #aeafaf;
+        border: 4px solid #edf2f2;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+        display: inline-block;
+        height: 18px;
+        width: 18px; }
+        ul.timeline li ul li a:after {
+          content: attr(data-title);
+          text-align: right; }
+
 /* =BTN 
 -------------------------------------------------------------- */
 a.btn {

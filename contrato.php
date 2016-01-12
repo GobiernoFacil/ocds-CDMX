@@ -17,6 +17,24 @@
 					<h3>LICITACIÓN</h3>
 					<h2>ADQUISICIÓN DE MATERIALES PARA OFICINA 003</h2>
 				</div>
+				<nav>
+					<ul class="timeline">
+						<li>CONTRATOS
+							<ul>
+								<li>Hace 5 meses</li>
+								<li>Hace 5 meses</li>
+							</ul>
+						</li>
+						<li>Adjudicación
+							<ul>
+								<li><a href="#" data-title="Hace 6 meses"></a></li>
+								<li>Hace 6 meses</li>
+							</ul>
+						</li>
+						<li>Licitación</li>
+						<li>Planeación</li>
+					</ul>
+				</nav>
 			</div>	
 			<div class="col-sm-9 info">
 				<div class="row divider">
