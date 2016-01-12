@@ -45,39 +45,94 @@ define(function(require){
     //
 
     initialize : function(){
-      var r1, r2, r3, r4, r5, r6;
+      var r1, r2, r3, r4, r5, r6, that = this;
       d3.json("/js/data/OCDS-87SD3T-SEFIN-30001105-006-2015.json", function(error, data){
         console.log(data);
         console.log(data.releases[0]);
+        that.prepare_data(data);
         r1 = data.releases[0];
       });
       d3.json("/js/data/OCDS-87SD3T-SEFIN-30001105-001-2015.json", function(error, data){
         console.log(data);
         console.log(data.releases[0]);
+        that.prepare_data(data);
         r2 = data.releases[0];
       });
       d3.json("/js/data/OCDS-87SD3T-SEFIN-30001105-002-2015.json", function(error, data){
         console.log(data);
         console.log(data.releases[0]);
+        that.prepare_data(data);
         r3 = data.releases[0];
       });
       d3.json("/js/data/OCDS-87SD3T-SEFIN-30001105-003-2015.json", function(error, data){
         console.log(data);
         console.log(data.releases[0]);
+        that.prepare_data(data);
         r4 = data.releases[0];
       });
       d3.json("/js/data/OCDS-87SD3T-SEFIN-30001105-004-2015.json", function(error, data){
         console.log(data);
         console.log(data.releases[0]);
+        that.prepare_data(data);
         r5 = data.releases[0];
       });
       d3.json("/js/data/OCDS-87SD3T-SEFIN-30001105-005-2015.json", function(error, data){
         console.log(data);
         console.log(data.releases[0]);
+        that.prepare_data(data);
         r6 = data.releases[0];
       });
 
       this.contracts = [r1, r2, r3, r4, r5, r6];
+    },
+
+    prepare_data : function(data){
+      var time_list = [],
+          container = data.releases[0];
+
+      time_list.push({
+        "publishedDate" : this.handle_dates(data.publishedDate)
+      }, {
+        "releaseDate"   : this.handle_dates(container.date)
+      });
+
+      if(container.awards.length){
+        container.awards.forEach(function(award){
+          time_list.push({
+            "award" : this.handle_dates(award.date)
+          });
+        }, this);
+      }
+
+      if(container.contracts.length){
+        container.contracts.forEach(function(contract){
+          time_list.push({
+            "contract"  : this.handle_dates(contract.dateSigned),
+            "startDate" : this.handle_dates(contract.period.startDate),
+            "endDate"   : this.handle_dates(contract.period.endDate)
+          });
+        }, this);
+      }
+
+      if(container.tender){
+        time_list.push({
+          "tenderPeriodStartDate" : this.handle_dates(container.tender.tenderPeriod.startDate),
+          "tenderPeriodEndDate" : this.handle_dates(container.tender.tenderPeriod.endDate)
+        });
+        time_list.push({
+          "tenderAwardPeriodStartDate" : this.handle_dates(container.tender.awardPeriod.startDate),
+          "tenderAwardPeriodEndDate" : this.handle_dates(container.tender.awardPeriod.endDate)
+        });
+
+        if(container.tender.hasEnquiries){
+          time_list.push({
+            "tenderEnquiryPeriodStartDate" : this.handle_dates(container.tender.enquiryPeriod.startDate),
+            "tenderEnquiryPeriodEndDate" : this.handle_dates(container.tender.enquiryPeriod.endDate)
+          });
+        }
+      }
+
+      console.log(time_list);
     },
 
     handle_dates : function(str){
