@@ -91,48 +91,99 @@ define(function(require){
           container = data.releases[0];
 
       time_list.push({
-        "publishedDate" : this.handle_dates(data.publishedDate)
+        "name" : "publishedDate",
+        "type" : "publishedDate",
+        "date" : this.handle_dates(data.publishedDate),
+        "data" : data
       }, {
-        "releaseDate"   : this.handle_dates(container.date)
+        "name" : "releaseDate",
+        "type" : "releaseDate", 
+        "date" : this.handle_dates(container.date),
+        "data" : container
       });
 
       if(container.awards.length){
-        container.awards.forEach(function(award){
+        container.awards.forEach(function(award, num){
+          var name = "award" + num;
+
           time_list.push({
-            "award" : this.handle_dates(award.date)
+            "name" : name,
+            "type" : "award",
+            "date" : this.handle_dates(award.date),
+            "data" : award
           });
         }, this);
       }
 
       if(container.contracts.length){
-        container.contracts.forEach(function(contract){
+        container.contracts.forEach(function(contract, num){
+          var name = "contract" + num;
           time_list.push({
-            "contract"  : this.handle_dates(contract.dateSigned),
-            "startDate" : this.handle_dates(contract.period.startDate),
-            "endDate"   : this.handle_dates(contract.period.endDate)
+            "name" : name,
+            "type" : "contract",
+            "date" : this.handle_dates(contract.dateSigned),
+            "data" : contract,
+          },
+          {
+            "name" : name,
+            "type" : "startDate",
+            "date" : this.handle_dates(contract.period.startDate),
+            "data" : contract
+          },
+          {
+            "name" : name,
+            "type" : "endDate",
+            "date" : this.handle_dates(contract.period.endDate),
+            "data" : contract
           });
         }, this);
       }
 
       if(container.tender){
         time_list.push({
-          "tenderPeriodStartDate" : this.handle_dates(container.tender.tenderPeriod.startDate),
-          "tenderPeriodEndDate" : this.handle_dates(container.tender.tenderPeriod.endDate)
+          "name" : "tender",
+          "type" : "tenderPeriodStartDate",
+          "date" : this.handle_dates(container.tender.tenderPeriod.startDate),
+          "data" : container.tender
+        },
+        {
+          "name" : "tender",
+          "type" : "tenderPeriodEndDate",
+          "date" : this.handle_dates(container.tender.tenderPeriod.endDate),
+          "data" : container.tender
         });
         time_list.push({
-          "tenderAwardPeriodStartDate" : this.handle_dates(container.tender.awardPeriod.startDate),
-          "tenderAwardPeriodEndDate" : this.handle_dates(container.tender.awardPeriod.endDate)
+          "name" : "tender",
+          "type" : "tenderAwardPeriodStartDate",
+          "date" : this.handle_dates(container.tender.awardPeriod.startDate),
+          "data" : container.tender
+        },
+        {
+          "name" : "tender",
+          "type" : "tenderAwardPeriodEndDate",
+          "date" : this.handle_dates(container.tender.awardPeriod.endDate),
+          "data" : container.tender
         });
 
         if(container.tender.hasEnquiries){
           time_list.push({
-            "tenderEnquiryPeriodStartDate" : this.handle_dates(container.tender.enquiryPeriod.startDate),
-            "tenderEnquiryPeriodEndDate" : this.handle_dates(container.tender.enquiryPeriod.endDate)
+            "name" : "tender",
+            "type" : "tenderEnquiryPeriodStartDate",
+            "date" : this.handle_dates(container.tender.enquiryPeriod.startDate),
+            "data" : container.tender
+          },
+          {
+            "name" : "tender",
+            "type" : "tenderEnquiryPeriodEndDate",
+            "date" : this.handle_dates(container.tender.enquiryPeriod.endDate),
+            "data" : container.tender
           });
         }
       }
 
-      console.log(time_list);
+      console.log(time_list.sort(function(a,b){
+        return a.date - b.date
+      }));
     },
 
     handle_dates : function(str){
