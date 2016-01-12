@@ -1,0 +1,77 @@
+{
+  "identifier": {
+    "id": "AAR060308TT4",
+    "uri": "http://10.1.65.188/achavez/OCDS/ArchivoJSONProv/Proveedores.json"
+  },
+  "name": "ABASTECEDORA ARAGONESA SA DE CV",
+  "address": {
+    "streetAddress": "AVENIDA DEL TALLER",
+    "locality": "TRANSTIO CUAUHTEMOC",
+    "region": "DF",
+    "postalCode": "06820",
+    "countryName": "MX"
+  },
+  "contactPoint": {
+    "name": "Juan Garcia",
+    "email": "garcia@gmail.com",
+    "telephone": "5556712376",
+    "faxNumber": "5556712376",
+    "url": "No Capturado"
+  },
+  "awards": [
+    {
+      "buyer": {
+        "identifier": {
+          "id": "0901",
+          "uri": "http://10.1.65.188/achavez/OCDS/ArchivoJSONDep/Dependencias.json"
+        },
+        "name": "SECRETARÍA DE FINANZAS"
+      },
+      "id": "1",
+      "title": "PRUEBA 2 CALIDAD",
+      "description": "PAPELERIA SEFIN 2",
+      "status": "active",
+      "date": "2015-11-11T00:00:00.-06:00",
+      "value": {
+        "amount": 23250,
+        "currency": "MXN"
+      }
+    },
+    {
+      "buyer": {
+        "identifier": {
+          "id": "0901",
+          "uri": "http://10.1.65.188/achavez/OCDS/ArchivoJSONDep/Dependencias.json"
+        },
+        "name": "SECRETARÍA DE FINANZAS"
+      },
+      "id": "2",
+      "title": "PRUEBA 3 CALIDAD",
+      "description": "PAPELERIA SEFIN 3",
+      "status": "active",
+      "date": "2015-11-11T00:00:00.-06:00",
+      "value": {
+        "amount": 2250,
+        "currency": "MXN"
+      }
+    },
+    {
+      "buyer": {
+        "identifier": {
+          "id": "0901",
+          "uri": "http://10.1.65.188/achavez/OCDS/ArchivoJSONDep/Dependencias.json"
+        },
+        "name": "SECRETARÍA DE FINANZAS"
+      },
+      "id": "3",
+      "title": "PRUEBA 4 CALIDAD",
+      "description": "PAPELERIA SEFIN 4",
+      "status": "active",
+      "date": "2015-11-11T00:00:00.-06:00",
+      "value": {
+        "amount": 123250,
+        "currency": "MXN"
+      }
+    }
+  ],
+}
