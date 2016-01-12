@@ -10,8 +10,6 @@
 	</div>
 </div>
 <article>
-	<div class="container">
-		<div class="row">
 			<div class="col-sm-3 sidebar">
 				<div class="header">
 					<h3>LICITACIÓN</h3>
@@ -19,20 +17,20 @@
 				</div>
 				<nav>
 					<ul class="timeline">
-						<li>CONTRATOS
+						<li><a href="#" class="nav_stage current"><?php echo file_get_contents("img/nav_contratacion.svg"); ?>	</a>
 							<ul>
-								<li>Hace 5 meses</li>
-								<li>Hace 5 meses</li>
+								<li class="active"><a href="#" data-title="Hace 5 meses" class="t_right"></a></li>
+								<li><a href="#" data-title="Hace 5 meses" class="t_left"></a></li>
 							</ul>
 						</li>
-						<li>Adjudicación
+						<li><a href="#" class="nav_stage" data-title="Adjudicación"><?php echo file_get_contents("img/nav_adjudicacion.svg"); ?></a> 
 							<ul>
-								<li><a href="#" data-title="Hace 6 meses"></a></li>
-								<li>Hace 6 meses</li>
+								<li><a href="#" data-title="Hace 6 meses" class="t_right"></a></li>
+								<li><a href="#" data-title="Hace 6 meses" class="t_left"></a></li>
 							</ul>
 						</li>
-						<li>Licitación</li>
-						<li>Planeación</li>
+						<li><a href="#" class="nav_stage" data-title="Licitación"><?php echo file_get_contents("img/nav_licitacion.svg"); ?></a></li>
+						<li><a href="#" class="nav_stage" data-title="Planeación"><?php echo file_get_contents("img/nav_planeacion.svg"); ?></a></li>
 					</ul>
 				</nav>
 			</div>	
@@ -92,8 +90,7 @@
 					</div> 
 				</div>
 			</div>
-		</div>
-	</div>
+			<div class="clearfix"></div>
 </article>
 	
 	
