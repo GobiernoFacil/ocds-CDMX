@@ -1411,6 +1411,100 @@ div.forthewin {
         left: 5px;
         top: 5px; }
 
+/* =CONTRACT 
+-------------------------------------------------------------- */
+.breadcrumb {
+  background: #4d4d4d;
+  min-height: 52px; }
+
+.contract article {
+  background: #d6d6d4;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03); }
+.contract nav#menu {
+  position: relative; }
+.contract .sidebar {
+  padding: 0; }
+  .contract .sidebar .header {
+    padding: 35px 25px;
+    background: #ebebeb;
+    border-bottom: 1px solid #cacccc; }
+    .contract .sidebar .header h3 {
+      color: #cacaca;
+      font-size: 14px; }
+    .contract .sidebar .header h2 {
+      color: #8e8e8e;
+      font-size: 21px; }
+.contract .info {
+  background: white;
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  min-height: 200px;
+  padding: 35px 35px 70px; }
+  .contract .info .title_section {
+    color: #b7b7b6;
+    font-size: 12px;
+    margin-bottom: 12px;
+    text-transform: uppercase; }
+  .contract .info h1 {
+    color: #263333;
+    font-size: 36px;
+    line-height: 1; }
+  .contract .info h2 {
+    color: #969295;
+    font-size: 23px; }
+    .contract .info h2.amount {
+      color: #263333;
+      font-size: 33px;
+      margin-top: 15px; }
+      .contract .info h2.amount span {
+        color: #5e5e5b;
+        font: 300 24px 'Geomanist', Helvetica, Arial, sans-serif; }
+  .contract .info .row.divider {
+    border-bottom: 1px solid #ccc;
+    margin: 0 -15px 25px;
+    padding: 0 0 25px; }
+  .contract .info li {
+    border-bottom: 1px dotted #ccc;
+    font-size: 13px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0; }
+    .contract .info li span {
+      padding: 0; }
+
+ul.timeline {
+  padding-top: 25px;
+  position: relative; }
+  ul.timeline:before {
+    background: #cacccc;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 49%;
+    border: 3px solid #e8eaea;
+    border-top: 0;
+    height: 100%;
+    width: 1px;
+    z-index: 0; }
+  ul.timeline li {
+    position: relative;
+    margin-bottom: 40px;
+    text-align: center; }
+    ul.timeline li ul {
+      margin-top: 40px; }
+      ul.timeline li ul li a {
+        background: #aeafaf;
+        border: 4px solid #edf2f2;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+        display: inline-block;
+        height: 18px;
+        width: 18px; }
+        ul.timeline li ul li a:after {
+          content: attr(data-title);
+          text-align: right; }
+
 /* =BTN 
 -------------------------------------------------------------- */
 a.btn {
@@ -1439,6 +1533,15 @@ a.btn {
   a.btn:hover {
     background: #333333;
     color: white; }
+
+.label {
+  color: white;
+  font-size: 11px;
+  display: inline-block;
+  padding: 2px 7px;
+  vertical-align: top; }
+  .label.active {
+    background: #31bc31; }
 
 /* =FOOTER
 -------------------------------------------------------------- */
