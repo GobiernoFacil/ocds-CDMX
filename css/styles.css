@@ -1437,8 +1437,8 @@ div.forthewin {
 .contract .info {
   background: white;
   border-left: 1px solid rgba(0, 0, 0, 0.3);
-  min-height: 200px;
-  padding: 35px 35px 70px; }
+  min-height: 746px;
+  padding: 35px 35px 120px; }
   .contract .info .title_section {
     color: #b7b7b6;
     font-size: 12px;
@@ -1482,13 +1482,15 @@ ul.timeline {
     left: 49%;
     border: 3px solid #e8eaea;
     border-top: 0;
-    height: 100%;
+    height: 98%;
     width: 1px;
     z-index: 0; }
   ul.timeline li {
     position: relative;
     margin-bottom: 40px;
     text-align: center; }
+    ul.timeline li.active:after {
+      content: "h"; }
     ul.timeline li ul {
       margin-top: 40px; }
       ul.timeline li ul li a {
@@ -1500,10 +1502,32 @@ ul.timeline {
         border-radius: 50%;
         display: inline-block;
         height: 18px;
+        position: relative;
         width: 18px; }
         ul.timeline li ul li a:after {
+          color: rgba(71, 71, 71, 0.4);
           content: attr(data-title);
+          font-size: 13px;
+          position: absolute;
+          width: 100px;
+          top: -3px; }
+        ul.timeline li ul li a.t_right:after {
+          left: 20px;
+          text-align: left; }
+        ul.timeline li ul li a.t_left:after {
+          right: 20px;
           text-align: right; }
+  ul.timeline .nav_stage.current {
+    background: #dd5aa0;
+    border: 3px solid #eaeaea;
+    margin-top: 0;
+    height: 40px;
+    width: 40px; }
+    ul.timeline .nav_stage.current svg {
+      height: 25px;
+      width: 25px; }
+      ul.timeline .nav_stage.current svg path {
+        fill: white; }
 
 /* =BTN 
 -------------------------------------------------------------- */
