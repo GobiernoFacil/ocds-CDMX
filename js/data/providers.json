@@ -1,0 +1,41 @@
+{ "providers" :[
+    {
+        "rfc": "ANO080523H99 ",
+        "name": "A NOVEAUTEC SA DE CV",
+        "total": "500",
+        "address": {
+            "streetAddress": "BATALLA DE LOMA ALTA, LO M121",
+            "locality": "IZTAPALAPA",
+            "region": "DF ",
+            "postalCode": "09310",
+            "countryName": "MX"
+        },
+        "contactPoint": {
+            "name": "A NOVEAUTE",
+            "email": "No Capturado",
+            "telephone": "56116443",
+            "faxNumber": "56116443",
+            "url": "No Capturado"
+        }
+    },
+    {
+        "rfc": "AAM041213DS4 ",
+        "name": "AAMEVHOS AC",
+        "total": "500",
+        "address": {
+            "streetAddress": "COLIMA 45 - 301",
+            "locality": "CUAUHTEMOC ",
+            "region": "DF ",
+            "postalCode": "06700",
+            "countryName": "MX"
+        },
+        "contactPoint": {
+            "name": "AAMEVHOS  ",
+            "email": "No Capturado",
+            "telephone": "10541580",
+            "faxNumber": "        ",
+            "url": "No Capturado"
+        }
+    }
+  ]
+}
