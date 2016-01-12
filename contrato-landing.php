@@ -23,6 +23,7 @@
 </section>
 
 <nav><a href="#">&lt; Dependencia</a></nav>
-<script data-main="/js/apps/provider/main" src="js/bower_components/requirejs/require.js"></script>
+
+<script data-main="/js/apps/contrato-landing/main" src="js/bower_components/requirejs/require.js"></script>
 </body>
 </html>
