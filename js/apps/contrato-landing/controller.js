@@ -120,7 +120,7 @@ define(function(require){
           var name = "contract" + num;
           time_list.push({
             "name" : name,
-            "type" : "contract",
+            "type" : "dateSigned",
             "date" : this.handle_dates(contract.dateSigned),
             "data" : contract,
           },
@@ -179,6 +179,9 @@ define(function(require){
             "data" : container.tender
           });
         }
+      }
+      else{
+        console.log("no tender", data, container);
       }
 
       console.log(time_list.sort(function(a,b){
