@@ -1411,6 +1411,66 @@ div.forthewin {
         left: 5px;
         top: 5px; }
 
+/* =CONTRACT 
+-------------------------------------------------------------- */
+.breadcrumb {
+  background: #4d4d4d;
+  min-height: 52px; }
+
+.contract article {
+  background: #d6d6d4;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03); }
+.contract nav#menu {
+  position: relative; }
+.contract .sidebar {
+  padding: 0; }
+  .contract .sidebar .header {
+    padding: 35px 25px;
+    background: #ebebeb;
+    border-bottom: 1px solid #cacccc; }
+    .contract .sidebar .header h3 {
+      color: #cacaca;
+      font-size: 14px; }
+    .contract .sidebar .header h2 {
+      color: #8e8e8e;
+      font-size: 21px; }
+.contract .info {
+  background: white;
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  min-height: 200px;
+  padding: 35px 35px 70px; }
+  .contract .info .title_section {
+    color: #b7b7b6;
+    font-size: 12px;
+    margin-bottom: 12px;
+    text-transform: uppercase; }
+  .contract .info h1 {
+    color: #263333;
+    font-size: 36px;
+    line-height: 1; }
+  .contract .info h2 {
+    color: #969295;
+    font-size: 23px; }
+    .contract .info h2.amount {
+      color: #263333;
+      font-size: 33px;
+      margin-top: 15px; }
+      .contract .info h2.amount span {
+        color: #5e5e5b;
+        font: 300 24px 'Geomanist', Helvetica, Arial, sans-serif; }
+  .contract .info .row.divider {
+    border-bottom: 1px solid #ccc;
+    margin: 0 -15px 25px;
+    padding: 0 0 25px; }
+  .contract .info li {
+    border-bottom: 1px dotted #ccc;
+    font-size: 13px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0; }
+    .contract .info li span {
+      padding: 0; }
+
 /* =BTN 
 -------------------------------------------------------------- */
 a.btn {
@@ -1439,6 +1499,15 @@ a.btn {
   a.btn:hover {
     background: #333333;
     color: white; }
+
+.label {
+  color: white;
+  font-size: 11px;
+  display: inline-block;
+  padding: 2px 7px;
+  vertical-align: top; }
+  .label.active {
+    background: #31bc31; }
 
 /* =FOOTER
 -------------------------------------------------------------- */
