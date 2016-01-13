@@ -1490,7 +1490,26 @@ ul.timeline {
     margin-bottom: 40px;
     text-align: center; }
     ul.timeline li.active:after {
-      content: "h"; }
+      content: "";
+      border-style: solid;
+      border-width: 10px 17.3px 10px 1px;
+      border-color: transparent #ffffff transparent transparent;
+      position: absolute;
+      right: -1px;
+      z-index: 10; }
+    ul.timeline li.active:before {
+      content: "";
+      border-style: solid;
+      border-width: 12px 20.8px 12px 0;
+      border-color: transparent rgba(0, 0, 0, 0.1) transparent transparent;
+      position: absolute;
+      right: -1px;
+      z-index: 10;
+      top: -2px; }
+    ul.timeline li.active a {
+      background: #474747; }
+      ul.timeline li.active a:after {
+        color: #474747; }
     ul.timeline li ul {
       margin-top: 40px; }
       ul.timeline li ul li a {
