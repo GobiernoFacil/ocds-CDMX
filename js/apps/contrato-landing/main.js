@@ -13,7 +13,7 @@ require.config({
     jquery      : "../../bower_components/jquery/dist/jquery.min",
     backbone    : "../../bower_components/backbone/backbone",
     underscore  : "../../bower_components/underscore/underscore-min",
-    text        : "../../bower_components/requirejs-text/text",
+    text        : "../../bower_components/text/text",
     TimelineMax : "../../bower_components/gsap/src/minified/TimelineMax.min",
     TweenLite   : "../../bower_components/gsap/src/minified/TweenLite.min",
     TweenMax    : "../../bower_components/gsap/src/minified/TweenMax.min",

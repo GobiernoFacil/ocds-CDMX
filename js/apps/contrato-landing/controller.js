@@ -12,7 +12,7 @@ define(function(require){
   // --------------------------------------------------------------------------------
   //
   var Backbone = require('backbone'),
-      d3       = require("d3");
+      d3       = require("d3"),
       //data     = require("json!../../data/OCDS-87SD3T-SEFIN-30001105-006-2015.json");
   //
   // D E F I N E   T H E   S E T U P   V A R I A B L E S
@@ -25,6 +25,14 @@ define(function(require){
   // C A C H E   T H E   C O M M O N   E L E M E N T S
   // --------------------------------------------------------------------------------
   //
+  Timeline        = document.querySelector(".timeline"),
+  PlanningLink    = document.querySelector("#planning-link"),
+  TenderLink      = null,
+  TenderLinkLI    = require("text!templates/nav-li-tender.html"),
+  AwardsLinkLI    = require("text!templates/nav-li-awards.html"),
+  AwardLinkLI     = require("text!templates/nav-li-award.html"),
+  ContractsLinkLI = require("text!templates/nav-li-contracts.html"),
+  ContractLinkLI  = require("text!templates/nav-li-contract.html");
 
  
 
@@ -39,6 +47,12 @@ define(function(require){
 
     el : "body",
 
+    tenderLinkLI : _.template(TenderLinkLI),
+    awardsLinkLI : _.template(AwardsLinkLI),
+    awardLinkLI  : _.template(AwardLinkLI),
+    contractsLinkLI : _.template(ContractsLinkLI),
+    contractLinkLI  : _.template(ContractLinkLI),
+
     //
     // S E T U P   S C E N E S
     // --------------------------------------------------------------------------------
@@ -46,12 +60,14 @@ define(function(require){
 
     initialize : function(){
       var r1, r2, r3, r4, r5, r6, that = this;
-      d3.json("/js/data/OCDS-87SD3T-SEFIN-30001105-006-2015.json", function(error, data){
+      d3.json("/js/data/OCDS-87SD3T-SEFIN-30001105-005-2015.json", function(error, data){
         console.log(data);
         console.log(data.releases[0]);
-        that.prepare_data(data);
+        //that.prepare_data(data);
         r1 = data.releases[0];
+        that.enable_navigation(that.prepare_data(data));
       });
+      /*
       d3.json("/js/data/OCDS-87SD3T-SEFIN-30001105-001-2015.json", function(error, data){
         console.log(data);
         console.log(data.releases[0]);
@@ -84,8 +100,102 @@ define(function(require){
       });
 
       this.contracts = [r1, r2, r3, r4, r5, r6];
+      */
     },
 
+    // [ MAKE THE NAVIGATION ]
+    //
+    //
+    //
+    enable_navigation : function(time_list){
+      // [1] SET INITIAL DATE 
+      var initialDate = _.findWhere(time_list, {name : "publishedDate"}),
+          tender      = _.findWhere(time_list, {name : "tender"}),
+          awards      = _.where(time_list, {type : "award"}),
+          contracts   = _.where(time_list, {type : "dateSigned"});
+      $(PlanningLink).attr("data-date", this.get_date_label(initialDate.date));
+
+      // [2] SET TENDER DATE
+      if(tender){
+        var date = {date : this.get_date_label(tender.date)};
+        $(Timeline).prepend(this.tenderLinkLI(date));
+      }
+
+      // [3] SET AWARDS DATE AND AWARDS LIST
+      if(awards.length){
+        $(Timeline).prepend(this.awardsLinkLI());
+        awards.forEach(function(award, pos){
+          var d = {date : this.get_date_label(award.date), i : pos};
+          console.log(d);
+          $("#awards-link + ul").prepend(this.awardLinkLI(d));
+        }, this);
+      }
+
+      // [4] SET CONTRACTS DATE AND CONTRACTS LIST
+      if(contracts.length){
+        $(Timeline).prepend(this.contractsLinkLI());
+        contracts.forEach(function(contract, pos){
+          var d = {date : this.get_date_label(contract.dateSigned), i : pos};
+          console.log(d);
+          $("#contracts-link + ul").prepend(this.contractLinkLI(d));
+        }, this);
+      }
+
+      /*
+      time_list.forEach(function(d){
+        console.log(this.get_date_label(d.date));
+      }, this);
+*/
+    },
+
+    // [ HANDLE DATEDIFFS ] 
+    //
+    //
+    //
+    get_date_label : function(date){
+      var today = new Date(),
+          diff  = today - date,
+          days  = Math.floor(diff /(1000*60*60*24)),
+          months = Math.floor(days/30),
+          label;
+
+      if(days < 1){
+        label = "hoy";
+      }
+      else if(days < 2){
+        label = "ayer";
+      }
+
+      else if(days < 31){
+        label = "hace " + days + " días";
+      }
+
+      else if(months < 2){
+        label = "hace un mes";
+      }
+      else if(months < 12){
+        label = "hace " + months + " meses";
+      }
+      else{
+        label = "hace un año o más";
+      }
+
+      return label;
+    },
+
+    // [ PARSE THE SERVER DATES ]
+    //
+    //
+    //
+    handle_dates : function(str){
+      var d = str.slice(0, 10).split("-");
+      return new Date(d[0], +d[1]-1, d[2]);
+    },
+
+    // [ MAKE AN ARRAY WITH DATA, ORDERED BY DATE ]
+    // 
+    //
+    //
     prepare_data : function(data){
       var time_list = [],
           container = data.releases[0];
@@ -185,13 +295,10 @@ define(function(require){
       }
 
       console.log(time_list.sort(function(a,b){
-        return a.date - b.date
+        return b.date - a.date
       }));
-    },
 
-    handle_dates : function(str){
-      var d = str.slice(0, 10).split("-");
-      return new Date(d[0], +d[1]-1, d[2]);
+      return time_list;
     }
   });
 
