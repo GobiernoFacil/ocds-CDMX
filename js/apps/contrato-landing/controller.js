@@ -13,7 +13,12 @@ define(function(require){
   //
   var Backbone = require('backbone'),
       d3       = require("d3"),
-      //data     = require("json!../../data/OCDS-87SD3T-SEFIN-30001105-006-2015.json");
+      TenderLinkLI    = require("text!templates/nav-li-tender.html"),
+      AwardsLinkLI    = require("text!templates/nav-li-awards.html"),
+      AwardLinkLI     = require("text!templates/nav-li-award.html"),
+      ContractsLinkLI = require("text!templates/nav-li-contracts.html"),
+      ContractView    = require("views/contract_nav_view"),
+      TenderView      = require("views/tender_view"),
   //
   // D E F I N E   T H E   S E T U P   V A R I A B L E S
   // --------------------------------------------------------------------------------
@@ -25,14 +30,10 @@ define(function(require){
   // C A C H E   T H E   C O M M O N   E L E M E N T S
   // --------------------------------------------------------------------------------
   //
-  Timeline        = document.querySelector(".timeline"),
-  PlanningLink    = document.querySelector("#planning-link"),
-  TenderLink      = null,
-  TenderLinkLI    = require("text!templates/nav-li-tender.html"),
-  AwardsLinkLI    = require("text!templates/nav-li-awards.html"),
-  AwardLinkLI     = require("text!templates/nav-li-award.html"),
-  ContractsLinkLI = require("text!templates/nav-li-contracts.html"),
-  ContractLinkLI  = require("text!templates/nav-li-contract.html");
+  Timeline       = document.querySelector(".timeline"),
+  PlanningLink   = document.querySelector("#planning-link"),
+  StuffContainer = document.querySelector("#here-goes-the-stuff"),
+  TenderLink     = null;
 
  
 
@@ -51,19 +52,30 @@ define(function(require){
     awardsLinkLI : _.template(AwardsLinkLI),
     awardLinkLI  : _.template(AwardLinkLI),
     contractsLinkLI : _.template(ContractsLinkLI),
-    contractLinkLI  : _.template(ContractLinkLI),
 
     //
-    // S E T U P   S C E N E S
+    // I N I T I A L I Z E   T H E   A P P
     // --------------------------------------------------------------------------------
     //
 
     initialize : function(){
       var that = this;
       d3.json("/js/data/OCDS-87SD3T-SEFIN-DRM-AD-CC-008-2015.json", function(error, data){
-        console.log(data);
-        that.enable_navigation(that.prepare_data(data));
+        that.data = data;
+        that.time_list = that.prepare_data(data);
+        that.enable_navigation(that.time_list);
       });
+    },
+
+    show_tender : function(){
+      StuffContainer.html = "";
+      var tender = new TenderView({
+        controller : this,
+        data       : this.data,
+        time_list  : this.time_list
+      });
+      
+      $(StuffContainer).append(tender.render().el);
     },
 
     // [ MAKE THE NAVIGATION ]
@@ -97,16 +109,15 @@ define(function(require){
       if(contracts.length){
         $(Timeline).prepend(this.contractsLinkLI());
         contracts.forEach(function(contract, pos){
-          var d = {date : this.get_date_label(contract.date), i : pos};
-          $("#contracts-link + ul").prepend(this.contractLinkLI(d));
+          var li = new ContractView({
+            label_date : this.get_date_label(contract.date),
+            num        : pos,
+            data       : contract,
+            controller : this
+          });
+          $("#contracts-link + ul").prepend(li.render().el);
         }, this);
       }
-
-      /*
-      time_list.forEach(function(d){
-        console.log(this.get_date_label(d.date));
-      }, this);
-*/
     },
 
     // [ HANDLE DATEDIFFS ] 
@@ -259,9 +270,9 @@ define(function(require){
         console.log("no tender", data, container);
       }
 
-      console.log(time_list.sort(function(a,b){
+      time_list.sort(function(a,b){
         return b.date - a.date
-      }));
+      });
 
       return time_list;
     }
