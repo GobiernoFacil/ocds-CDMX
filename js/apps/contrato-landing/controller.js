@@ -13,7 +13,12 @@ define(function(require){
   //
   var Backbone = require('backbone'),
       d3       = require("d3"),
-      //data     = require("json!../../data/OCDS-87SD3T-SEFIN-30001105-006-2015.json");
+      TenderLinkLI    = require("text!templates/nav-li-tender.html"),
+      AwardsLinkLI    = require("text!templates/nav-li-awards.html"),
+      AwardLinkLI     = require("text!templates/nav-li-award.html"),
+      ContractsLinkLI = require("text!templates/nav-li-contracts.html"),
+      ContractView    = require("views/contract_nav_view"),
+      TenderView      = require("views/tender_view"),
   //
   // D E F I N E   T H E   S E T U P   V A R I A B L E S
   // --------------------------------------------------------------------------------
@@ -25,15 +30,10 @@ define(function(require){
   // C A C H E   T H E   C O M M O N   E L E M E N T S
   // --------------------------------------------------------------------------------
   //
-  Timeline        = document.querySelector(".timeline"),
-  PlanningLink    = document.querySelector("#planning-link"),
-  TenderLink      = null,
-  TenderLinkLI    = require("text!templates/nav-li-tender.html"),
-  AwardsLinkLI    = require("text!templates/nav-li-awards.html"),
-  AwardLinkLI     = require("text!templates/nav-li-award.html"),
-  ContractsLinkLI = require("text!templates/nav-li-contracts.html"),
-  ContractLinkLI  = require("text!templates/nav-li-contract.html"),
-  ContractView    = require("views/contract_nav_view");
+  Timeline       = document.querySelector(".timeline"),
+  PlanningLink   = document.querySelector("#planning-link"),
+  StuffContainer = document.querySelector("#here-goes-the-stuff"),
+  TenderLink     = null;
 
  
 
@@ -52,7 +52,6 @@ define(function(require){
     awardsLinkLI : _.template(AwardsLinkLI),
     awardLinkLI  : _.template(AwardLinkLI),
     contractsLinkLI : _.template(ContractsLinkLI),
-    contractLinkLI  : _.template(ContractLinkLI),
 
     //
     // I N I T I A L I Z E   T H E   A P P
@@ -65,6 +64,12 @@ define(function(require){
         console.log(data);
         that.enable_navigation(that.prepare_data(data));
       });
+    },
+
+    show_tender : function(){
+      StuffContainer.html = "";
+      var tender = new TenderView();
+      $(StuffContainer).append(tender.render().el);
     },
 
     // [ MAKE THE NAVIGATION ]
