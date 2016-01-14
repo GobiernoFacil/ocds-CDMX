@@ -60,9 +60,7 @@ define(function(require){
 
     initialize : function(){
       var that = this;
-      d3.json("/js/data/OCDS-87SD3T-SEFIN-DRM-LPN-016-2015.json", function(error, data){
-        //that.prepare_data(data);
-        //r1 = data.releases[0];
+      d3.json("/js/data/OCDS-87SD3T-SEFIN-DRM-AD-CC-008-2015.json", function(error, data){
         console.log(data);
         that.enable_navigation(that.prepare_data(data));
       });
@@ -91,7 +89,6 @@ define(function(require){
         $(Timeline).prepend(this.awardsLinkLI());
         awards.forEach(function(award, pos){
           var d = {date : this.get_date_label(award.date), i : pos};
-          console.log(d);
           $("#awards-link + ul").prepend(this.awardLinkLI(d));
         }, this);
       }
@@ -100,9 +97,7 @@ define(function(require){
       if(contracts.length){
         $(Timeline).prepend(this.contractsLinkLI());
         contracts.forEach(function(contract, pos){
-          console.log(contract);
           var d = {date : this.get_date_label(contract.date), i : pos};
-          console.log(d);
           $("#contracts-link + ul").prepend(this.contractLinkLI(d));
         }, this);
       }
@@ -120,7 +115,6 @@ define(function(require){
     //
     get_date_label : function(date){
       if(!date) {
-        console.log(date);
         return "sin definir";
       }
       var today = new Date(),
@@ -158,7 +152,7 @@ define(function(require){
     //
     //
     handle_dates : function(str){
-      if(!str){console.log(str); return null;}
+      if(!str){ return null;}
       var d = str.slice(0, 10).split("-");
       return new Date(d[0], +d[1]-1, d[2]);
     },
