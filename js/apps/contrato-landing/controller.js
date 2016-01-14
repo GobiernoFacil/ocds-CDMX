@@ -32,7 +32,8 @@ define(function(require){
   AwardsLinkLI    = require("text!templates/nav-li-awards.html"),
   AwardLinkLI     = require("text!templates/nav-li-award.html"),
   ContractsLinkLI = require("text!templates/nav-li-contracts.html"),
-  ContractLinkLI  = require("text!templates/nav-li-contract.html");
+  ContractLinkLI  = require("text!templates/nav-li-contract.html"),
+  ContractView    = require("views/contract_nav_view");
 
  
 
@@ -54,7 +55,7 @@ define(function(require){
     contractLinkLI  : _.template(ContractLinkLI),
 
     //
-    // S E T U P   S C E N E S
+    // I N I T I A L I Z E   T H E   A P P
     // --------------------------------------------------------------------------------
     //
 
@@ -97,16 +98,15 @@ define(function(require){
       if(contracts.length){
         $(Timeline).prepend(this.contractsLinkLI());
         contracts.forEach(function(contract, pos){
-          var d = {date : this.get_date_label(contract.date), i : pos};
-          $("#contracts-link + ul").prepend(this.contractLinkLI(d));
+          var li = new ContractView({
+            label_date : this.get_date_label(contract.date),
+            num        : pos,
+            data       : contract,
+            controller : this
+          });
+          $("#contracts-link + ul").prepend(li.render().el);
         }, this);
       }
-
-      /*
-      time_list.forEach(function(d){
-        console.log(this.get_date_label(d.date));
-      }, this);
-*/
     },
 
     // [ HANDLE DATEDIFFS ] 
