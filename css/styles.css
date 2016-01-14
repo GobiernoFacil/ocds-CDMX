@@ -1432,6 +1432,12 @@ div.forthewin {
 .breadcrumb {
   background: #4d4d4d;
   min-height: 52px; }
+  .breadcrumb a {
+    color: white;
+    font-size: 18px;
+    line-height: 52px; }
+    .breadcrumb a:hover {
+      color: #ccc; }
 
 .contract article {
   background: #d6d6d4;
@@ -1502,6 +1508,12 @@ div.forthewin {
         font-size: 11px; }
         .contract .info ol a.link_doc:hover {
           color: #0a467c; }
+  .contract .info p a {
+    color: #eb008b;
+    border-bottom: 1px dotted #eb008b; }
+    .contract .info p a:hover {
+      color: #444;
+      border-bottom-color: #444; }
   .contract .info .lead {
     font: 300 17px 'Stilu', Helvetica, Arial, sans-serif;
     margin: 30px 0 0; }
@@ -1531,7 +1543,8 @@ ul.timeline {
       border-color: transparent #ffffff transparent transparent;
       position: absolute;
       right: -1px;
-      z-index: 10; }
+      z-index: 10;
+      top: 0; }
     ul.timeline li.active:before {
       content: "";
       border-style: solid;
@@ -1541,10 +1554,12 @@ ul.timeline {
       right: -1px;
       z-index: 10;
       top: -2px; }
-    ul.timeline li.active a {
+    ul.timeline li.active a.t_right, ul.timeline li.active a.t_left {
       background: #474747; }
-      ul.timeline li.active a:after {
+      ul.timeline li.active a.t_right:after, ul.timeline li.active a.t_left:after {
         color: #474747; }
+      ul.timeline li.active a.t_right:hover, ul.timeline li.active a.t_left:hover {
+        background: #474747; }
     ul.timeline li ul {
       margin-top: 40px; }
       ul.timeline li ul li a {
@@ -1558,6 +1573,10 @@ ul.timeline {
         height: 18px;
         position: relative;
         width: 18px; }
+        ul.timeline li ul li a:hover {
+          background: #eb008b; }
+          ul.timeline li ul li a:hover:after {
+            color: #474747; }
         ul.timeline li ul li a:after {
           color: rgba(71, 71, 71, 0.4);
           content: attr(data-title);
