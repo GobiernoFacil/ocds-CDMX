@@ -1,0 +1,36 @@
+{
+    "uri": "http://innovacion.finanzas.df.gob.mx/OCDS/OCDS-87SD3T-SEFIN-30001105-001-2015.json",
+    "publishedDate": "2015-01-01T00:00:00.-06:00",
+    "publisher": {
+        "scheme": "http://innovacion.finanzas.df.gob.mx/ocds/ArchivoJSONDep/Dependencias.json",
+        "name": "CDMX-SEFIN",
+        "uri": "http://www.finanzas.df.gob.mx/",
+        "uid": "901"
+    },
+    "releases": [
+        {
+            "ocid": "OCDS-87SD3T-SEFIN-30001105-001-2015",
+            "id": "1",
+            "date": "2015-01-01T00:00:00.-06:00",
+            "tag": [
+                "planning"
+            ],
+            "initiationType": "tender",
+            "planning": {
+                "budget": {
+                    "amount": {
+                        "amount": 93000,
+                        "currency": "MXN"
+                    },
+                    "project": "AUTORIZACIÓN PRESUPUESTAL SPP/190/2015"
+                },
+                "documents": []
+            },
+            "buyer": null,
+            "tender": null,
+            "awards": [],
+            "contracts": [],
+            "language": "es"
+        }
+    ]
+}
