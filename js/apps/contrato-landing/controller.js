@@ -59,48 +59,13 @@ define(function(require){
     //
 
     initialize : function(){
-      var r1, r2, r3, r4, r5, r6, that = this;
-      d3.json("/js/data/OCDS-87SD3T-SEFIN-30001105-005-2015.json", function(error, data){
-        console.log(data);
-        console.log(data.releases[0]);
+      var that = this;
+      d3.json("/js/data/OCDS-87SD3T-SEFIN-DRM-LPN-016-2015.json", function(error, data){
         //that.prepare_data(data);
-        r1 = data.releases[0];
+        //r1 = data.releases[0];
+        console.log(data);
         that.enable_navigation(that.prepare_data(data));
       });
-      /*
-      d3.json("/js/data/OCDS-87SD3T-SEFIN-30001105-001-2015.json", function(error, data){
-        console.log(data);
-        console.log(data.releases[0]);
-        that.prepare_data(data);
-        r2 = data.releases[0];
-      });
-      d3.json("/js/data/OCDS-87SD3T-SEFIN-30001105-002-2015.json", function(error, data){
-        console.log(data);
-        console.log(data.releases[0]);
-        that.prepare_data(data);
-        r3 = data.releases[0];
-      });
-      d3.json("/js/data/OCDS-87SD3T-SEFIN-30001105-003-2015.json", function(error, data){
-        console.log(data);
-        console.log(data.releases[0]);
-        that.prepare_data(data);
-        r4 = data.releases[0];
-      });
-      d3.json("/js/data/OCDS-87SD3T-SEFIN-30001105-004-2015.json", function(error, data){
-        console.log(data);
-        console.log(data.releases[0]);
-        that.prepare_data(data);
-        r5 = data.releases[0];
-      });
-      d3.json("/js/data/OCDS-87SD3T-SEFIN-30001105-005-2015.json", function(error, data){
-        console.log(data);
-        console.log(data.releases[0]);
-        that.prepare_data(data);
-        r6 = data.releases[0];
-      });
-
-      this.contracts = [r1, r2, r3, r4, r5, r6];
-      */
     },
 
     // [ MAKE THE NAVIGATION ]
@@ -135,7 +100,8 @@ define(function(require){
       if(contracts.length){
         $(Timeline).prepend(this.contractsLinkLI());
         contracts.forEach(function(contract, pos){
-          var d = {date : this.get_date_label(contract.dateSigned), i : pos};
+          console.log(contract);
+          var d = {date : this.get_date_label(contract.date), i : pos};
           console.log(d);
           $("#contracts-link + ul").prepend(this.contractLinkLI(d));
         }, this);
@@ -153,6 +119,10 @@ define(function(require){
     //
     //
     get_date_label : function(date){
+      if(!date) {
+        console.log(date);
+        return "sin definir";
+      }
       var today = new Date(),
           diff  = today - date,
           days  = Math.floor(diff /(1000*60*60*24)),
@@ -188,6 +158,7 @@ define(function(require){
     //
     //
     handle_dates : function(str){
+      if(!str){console.log(str); return null;}
       var d = str.slice(0, 10).split("-");
       return new Date(d[0], +d[1]-1, d[2]);
     },
