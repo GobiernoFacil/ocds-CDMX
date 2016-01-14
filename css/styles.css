@@ -245,6 +245,22 @@ input[type="search"]::-webkit-search-decoration {
   font-weight: normal;
   font-style: normal; }
 
+.percent {
+  height: 26px;
+  margin-top: 25px;
+  position: relative; }
+  .percent .budget {
+    background: #28c3f9;
+    height: 26px;
+    position: absolute; }
+  .percent .spent {
+    background: #0a467c;
+    height: 8px;
+    top: 9px;
+    position: absolute;
+    width: 100%;
+    z-index: 5; }
+
 .wrapper, .wrap {
   width: 90%;
   margin: 0 auto; }
@@ -1444,6 +1460,8 @@ div.forthewin {
     font-size: 12px;
     margin-bottom: 12px;
     text-transform: uppercase; }
+    .contract .info .title_section span.right {
+      float: right; }
   .contract .info h1 {
     color: #263333;
     font-size: 36px;
@@ -1470,6 +1488,23 @@ div.forthewin {
     padding: 10px 0; }
     .contract .info li span {
       padding: 0; }
+  .contract .info ol {
+    margin-left: 20px;
+    margin-top: 25px; }
+    .contract .info ol li {
+      list-style: decimal; }
+    .contract .info ol a {
+      color: #eb008b; }
+      .contract .info ol a:hover {
+        color: #555; }
+      .contract .info ol a.link_doc {
+        color: #28c3f9;
+        font-size: 11px; }
+        .contract .info ol a.link_doc:hover {
+          color: #0a467c; }
+  .contract .info .lead {
+    font: 300 17px 'Stilu', Helvetica, Arial, sans-serif;
+    margin: 30px 0 0; }
 
 ul.timeline {
   padding-top: 25px;
@@ -1585,6 +1620,24 @@ a.btn {
   vertical-align: top; }
   .label.active {
     background: #31bc31; }
+  .label.complete {
+    background: #28c3f9; }
+
+b.budget {
+  background: #0a467c;
+  display: inline-block;
+  height: 8px;
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 15px; }
+
+b.spent {
+  background: #28c3f9;
+  display: inline-block;
+  height: 26px;
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 15px; }
 
 /* =FOOTER
 -------------------------------------------------------------- */
