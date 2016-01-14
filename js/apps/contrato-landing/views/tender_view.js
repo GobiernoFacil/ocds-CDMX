@@ -59,6 +59,9 @@ define(function(require){
     // 
     //
     initialize : function(settings){
+      this.controller = settings.controller;
+      this.data       = settings.data;
+      this.time_list  = settings.time_list;
     },
 
     //
@@ -66,7 +69,10 @@ define(function(require){
     //
     //
     render : function(){
-      this.$el.append(this.template());
+      var d = {
+        ocid : this.data.releases[0].ocid
+      }
+      this.$el.append(this.template(d));
       return this;
     }
   });

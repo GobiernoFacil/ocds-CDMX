@@ -61,14 +61,20 @@ define(function(require){
     initialize : function(){
       var that = this;
       d3.json("/js/data/OCDS-87SD3T-SEFIN-DRM-AD-CC-008-2015.json", function(error, data){
-        console.log(data);
-        that.enable_navigation(that.prepare_data(data));
+        that.data = data;
+        that.time_list = that.prepare_data(data);
+        that.enable_navigation(that.time_list);
       });
     },
 
     show_tender : function(){
       StuffContainer.html = "";
-      var tender = new TenderView();
+      var tender = new TenderView({
+        controller : this,
+        data       : this.data,
+        time_list  : this.time_list
+      });
+      
       $(StuffContainer).append(tender.render().el);
     },
 
@@ -264,9 +270,9 @@ define(function(require){
         console.log("no tender", data, container);
       }
 
-      console.log(time_list.sort(function(a,b){
+      time_list.sort(function(a,b){
         return b.date - a.date
-      }));
+      });
 
       return time_list;
     }
