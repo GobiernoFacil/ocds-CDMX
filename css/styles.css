@@ -1436,6 +1436,27 @@ div.forthewin {
   background: #c1057e;
   min-height: 500px;
   margin-bottom: 70px; }
+  .viz_home header {
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 0; }
+    .viz_home header .center {
+      border: 1px solid #eb008b;
+      border-bottom: 0;
+      border-top: 0; }
+    .viz_home header p {
+      color: white;
+      font-size: 24px;
+      font-weight: 500;
+      text-align: center; }
+      .viz_home header p strong {
+        font-size: 50px;
+        font-weight: 700; }
+    .viz_home header span {
+      color: rgba(255, 255, 255, 0.7);
+      display: block;
+      font-size: 15px;
+      font-weight: 500; }
   .viz_home p {
     margin: 0; }
 
@@ -1489,6 +1510,7 @@ div.forthewin {
         border: 0;
         display: inline-block;
         font-size: 12px;
+        margin: 0;
         width: 30%;
         text-align: center; }
 
@@ -1503,6 +1525,20 @@ div.forthewin {
     line-height: 52px; }
     .breadcrumb a:hover {
       color: #ccc; }
+  .breadcrumb .dependencia {
+    background: #3c2835;
+    display: inline-block;
+    float: right;
+    margin: 0;
+    padding: 0;
+    width: 43px;
+    text-align: center; }
+    .breadcrumb .dependencia.live {
+      background: #c1057e; }
+      .breadcrumb .dependencia.live:hover {
+        background: #c1057e; }
+    .breadcrumb .dependencia:hover {
+      background: #eb008b; }
 
 .contract article {
   background: #d6d6d4;
