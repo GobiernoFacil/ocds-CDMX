@@ -1768,12 +1768,30 @@ ul.timeline {
         ul.timeline li ul li a.t_left:after {
           right: 20px;
           text-align: right; }
+  ul.timeline .nav_stage:hover:after {
+    color: #eb008b;
+    content: attr(data-title);
+    font-size: 13px;
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    left: 58%;
+    text-transform: uppercase; }
   ul.timeline .nav_stage.current {
     background: #dd5aa0;
     border: 3px solid #eaeaea;
     margin-top: 0;
     height: 40px;
     width: 40px; }
+    ul.timeline .nav_stage.current:after {
+      color: #dd5aa0;
+      content: attr(data-title);
+      font-size: 13px;
+      display: inline-block;
+      position: absolute;
+      top: 13px;
+      left: 55%;
+      text-transform: uppercase; }
     ul.timeline .nav_stage.current svg {
       height: 25px;
       width: 25px; }
