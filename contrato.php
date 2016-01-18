@@ -18,7 +18,8 @@
 				</div>
 				<nav>
 					<ul class="timeline">
-						<li><a href="#"  id="btn-contract-nav" class="nav_stage current"><?php echo file_get_contents("img/nav_contratacion.svg"); ?>	</a>
+						<li><a href="#"  id="btn-contract-nav" class="nav_stage current" data-title="Contratación">
+							<?php echo file_get_contents("img/nav_contratacion.svg"); ?>	</a>
 							<ul id="nav_contract">
 								<li class="active"><a id="btn-contract-1" href="#" data-title="Hace 5 meses" class="t_right"></a></li>
 								<li><a id="btn-contract-2" href="#" data-title="Hace 5 meses" class="t_left"></a></li>
