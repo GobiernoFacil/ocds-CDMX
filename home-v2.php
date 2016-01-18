@@ -66,8 +66,8 @@
 						<div class="col-sm-4">
 							<ul>
 								<li>Activo</li>
-								<li>3</li>
-								<li>10 meses</li>
+								<li class="contrato_num">3</li>
+								<li class="time_num">10 meses</li>
 							</ul>
 						</div>
 						<div class="clearfix"></div>
@@ -91,8 +91,8 @@
 						<div class="col-sm-4">
 							<ul>
 								<li>Activo</li>
-								<li>3</li>
-								<li>10 meses</li>
+								<li class="contrato_num">3</li>
+								<li class="time_num">10 meses</li>
 							</ul>
 						</div>
 						<div class="clearfix"></div>
@@ -116,8 +116,8 @@
 						<div class="col-sm-4">
 							<ul>
 								<li>Activo</li>
-								<li>3</li>
-								<li>10 meses</li>
+								<li class="contrato_num">3</li>
+								<li class="time_num">10 meses</li>
 							</ul>
 						</div>
 						<div class="clearfix"></div>
