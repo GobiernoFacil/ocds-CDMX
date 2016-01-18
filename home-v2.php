@@ -13,8 +13,9 @@
 			Contratos
 			</div>
 			<div class="col-sm-7 right">
-				<a href="#" id="dependencia-a" class="dependencia live">DA</a>
-				<a href="#" id="dependencia-a" class="dependencia">DB</a>
+				<a href="#" class="advanced_search">Advanced Search</a>
+				<a href="#" id="dependencia-a" class="ladependencia empresa">Proveedores</a>
+				<a href="#" id="dependencia-a" class="ladependencia live">Dependencia</a>
 			</div>
 		</nav>
 	</div>
