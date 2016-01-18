@@ -1429,7 +1429,7 @@ div.forthewin {
 
 /* =Home2 
 -------------------------------------------------------------- */
-.home2 nav#menu {
+.home2 nav#menu, .dependencia nav#menu {
   position: relative; }
 
 .viz_home {
@@ -1462,6 +1462,24 @@ div.forthewin {
 
 .list {
   margin: 60px 0; }
+  .list p {
+    color: #898989;
+    font-size: 14px;
+    margin: 0; }
+    .list p a {
+      color: #263333;
+      border-bottom: 1px dotted #eb008b; }
+      .list p a:hover {
+        color: #eb008b; }
+  .list h2 {
+    font-size: 21px; }
+    .list h2 span {
+      color: #969295;
+      font-size: 12px; }
+    .list h2 a {
+      color: #263333; }
+      .list h2 a:hover {
+        color: #eb008b; }
   .list li {
     background: white;
     border: 1px solid #d3d3d3;
@@ -1470,24 +1488,6 @@ div.forthewin {
     .list li .top {
       padding-top: 25px;
       padding-bottom: 15px; }
-    .list li h2 {
-      font-size: 21px; }
-      .list li h2 span {
-        color: #969295;
-        font-size: 12px; }
-      .list li h2 a {
-        color: #263333; }
-        .list li h2 a:hover {
-          color: #eb008b; }
-    .list li p {
-      color: #898989;
-      font-size: 14px;
-      margin: 0; }
-      .list li p a {
-        color: #263333;
-        border-bottom: 1px dotted #eb008b; }
-        .list li p a:hover {
-          color: #eb008b; }
     .list li .amount {
       background: #eb008b;
       color: white;
@@ -1513,6 +1513,50 @@ div.forthewin {
         margin: 0;
         width: 30%;
         text-align: center; }
+
+/* =Dependencia 
+-------------------------------------------------------------- */
+.box {
+  background: white;
+  margin: 50px 0 0;
+  padding: 35px; }
+
+.dependencia .row .col-sm-12:last-of-type {
+  margin-bottom: 120px; }
+
+.dependencia ul {
+  margin: 0; }
+.dependencia .list {
+  margin: 0; }
+  .dependencia .list li {
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    font-size: 15px;
+    margin-bottom: 0;
+    padding-top: 23px;
+    padding-bottom: 23px; }
+    .dependencia .list li a {
+      color: #eb008b; }
+      .dependencia .list li a:hover {
+        border-bottom: 1px dotted #eb008b; }
+.dependencia h1 {
+  font: 500 36px 'Geomanist', Helvetica, Arial, sans-serif; }
+  .dependencia h1 a {
+    color: #263333; }
+    .dependencia h1 a:hover {
+      color: #eb008b;
+      border-bottom: 1px dotted #eb008b; }
+.dependencia h2 {
+  font-size: 29px; }
+.dependencia h3 {
+  color: black;
+  font: 500 16px 'Geomanist', Helvetica, Arial, sans-serif;
+  margin-bottom: 15px; }
+.dependencia .divider {
+  border-bottom: 1px solid #ccc;
+  margin: 0 0 25px;
+  padding: 0 0 25px; }
 
 /* =CONTRACT 
 -------------------------------------------------------------- */
