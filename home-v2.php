@@ -13,8 +13,9 @@
 			Contratos
 			</div>
 			<div class="col-sm-7 right">
-				<a href="#" id="dependencia-a" class="dependencia live">DA</a>
-				<a href="#" id="dependencia-a" class="dependencia">DB</a>
+				<a href="#" class="advanced_search">Advanced Search</a>
+				<a href="#" id="dependencia-a" class="ladependencia empresa">Proveedores</a>
+				<a href="#" id="dependencia-a" class="ladependencia live">Dependencia</a>
 			</div>
 		</nav>
 	</div>
@@ -65,8 +66,8 @@
 						<div class="col-sm-4">
 							<ul>
 								<li>Activo</li>
-								<li>3</li>
-								<li>10 meses</li>
+								<li class="contrato_num">3</li>
+								<li class="time_num">10 meses</li>
 							</ul>
 						</div>
 						<div class="clearfix"></div>
@@ -90,8 +91,8 @@
 						<div class="col-sm-4">
 							<ul>
 								<li>Activo</li>
-								<li>3</li>
-								<li>10 meses</li>
+								<li class="contrato_num">3</li>
+								<li class="time_num">10 meses</li>
 							</ul>
 						</div>
 						<div class="clearfix"></div>
@@ -115,8 +116,8 @@
 						<div class="col-sm-4">
 							<ul>
 								<li>Activo</li>
-								<li>3</li>
-								<li>10 meses</li>
+								<li class="contrato_num">3</li>
+								<li class="time_num">10 meses</li>
 							</ul>
 						</div>
 						<div class="clearfix"></div>
