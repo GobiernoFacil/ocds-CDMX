@@ -249,16 +249,15 @@ input[type="search"]::-webkit-search-decoration {
   height: 26px;
   margin-top: 25px;
   position: relative; }
-  .percent .budget {
+  .percent .spent {
     background: #28c3f9;
     height: 26px;
     position: absolute; }
-  .percent .spent {
+  .percent .budget {
     background: #0a467c;
     height: 8px;
     top: 9px;
     position: absolute;
-    width: 100%;
     z-index: 5; }
 
 .wrapper, .wrap {
