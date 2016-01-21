@@ -249,11 +249,11 @@ input[type="search"]::-webkit-search-decoration {
   height: 26px;
   margin-top: 25px;
   position: relative; }
-  .percent .spent {
+  .percent .budget {
     background: #28c3f9;
     height: 26px;
     position: absolute; }
-  .percent .budget {
+  .percent .spent {
     background: #0a467c;
     height: 8px;
     top: 9px;
@@ -1837,7 +1837,7 @@ a.btn {
   .label.complete {
     background: #28c3f9; }
 
-b.budget {
+b.spent {
   background: #0a467c;
   display: inline-block;
   height: 8px;
@@ -1845,7 +1845,7 @@ b.budget {
   vertical-align: middle;
   width: 15px; }
 
-b.spent {
+b.budget {
   background: #28c3f9;
   display: inline-block;
   height: 26px;

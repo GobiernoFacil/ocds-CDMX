@@ -138,7 +138,7 @@
 								<div class="budget" style="width: <?php echo $percent_budget;?>"></div>
 								<div class="spent"  style="width: <?php echo $percent_spent;?>"></div>
 							</div>
-							<p class="title_section"><span>0</span> <span class="right"><?php echo $percent_tender > 100 ? number_format($percent_tender) : '100';?> </span></p>
+							<p class="title_section"><span>0</span> <span class="right"><?php echo $percent_tender > 100 ? number_format($percent_tender) : '100';?>%</span></p>
 						</div>
 					</div>
 					<div class="row divider">
