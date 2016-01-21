@@ -28,10 +28,6 @@
 	$og_image		= "img/og/contrato-cdmx.png";
 	$canonical		= $url;
 	include "templates/header.php";?>
-
-<pre>
-	<?php var_dump($elcontrato->releases[0]);?>
-</pre>
 <div class="breadcrumb">
 	<div class="container">
 		<a href="#"><strong>&lt;</strong> SEFIN</a>
@@ -52,18 +48,31 @@
 			<ul class="timeline">
 				<?php if($elcontrato->releases[0]->contracts):?>
 				<li><a href="#"  id="btn-contract-nav" class="nav_stage current" data-title="Contratación">
-					<?php echo file_get_contents("img/nav_contratacion.svg"); ?>	</a>
+					<?php echo file_get_contents("img/nav_contratacion.svg"); ?></a>
 					<ul id="nav_contract">
-						<li class="active"><a id="btn-contract-1" href="#" data-title="Hace 5 meses" class="t_right"></a></li>
-						<li><a id="btn-contract-2" href="#" data-title="Hace 5 meses" class="t_left"></a></li>
+						<?php 
+							$count_nav = 0;
+							foreach($elcontrato->releases[0]->contracts as $contract):?>
+						<?php 
+							  $count_nav++;
+							  $time_contract = strtotime($contract->dateSigned);
+							  $time_contract = date('d/m/Y',$time_contract);?>
+						<li class="active"><a id="btn-contract-<?php echo $count_nav;?>" href="#" data-title="<?php echo $time_contract;?>" class="t_right"></a></li>
+						<?php endforeach;?>
 					</ul>
 				</li>
 				<?php endif;?>
 				<?php if($elcontrato->releases[0]->awards):?>
 				<li><a href="#" id="btn-award-nav" class="nav_stage" data-title="Adjudicación"><?php echo file_get_contents("img/nav_adjudicacion.svg"); ?></a> 
 					<ul id="nav_award">
-						<li><a id="btn-award-1" href="#" data-title="Hace 6 meses" class="t_right"></a></li>
-						<li><a id="btn-award-2" href="#" data-title="Hace 6 meses" class="t_left"></a></li>
+						<?php $count_nav = 0;
+							foreach($elcontrato->releases[0]->awards as $award):?>
+						<?php 
+							  $count_nav++;
+							  $time_award = strtotime($award->date);
+							  $time_award = date('d/m/Y',$time_award);?>
+						<li><a id="btn-award-<?php echo $count_nav;?>" href="#" data-title="<?php echo $time_award;?>" class="t_right"></a></li>
+						<?php endforeach;?>
 					</ul>
 				</li>
 				<?php endif;?>
