@@ -1,4 +1,4 @@
-	<?php
+<?php
 	date_default_timezone_set('America/Mexico_City');
 	/* UGLY HACK */
 	$d = array_diff(scandir("./js/data"), ['..', '.', '.DS_Store']);
@@ -156,9 +156,4 @@
 	</div>
 </div>
 
-
-
-<ul id="contratos-list"></ul>
-
-<script data-main="/js/apps/provider/main" src="js/bower_components/requirejs/require.js"></script>
-	<?php include "templates/footer.php";?>
+<?php include "templates/footer.php";?>
