@@ -1,4 +1,14 @@
-<?php 	
+<?php 
+
+  /*
+  * 
+  * LOAD THE DATA 
+  */	
+
+
+  /*
+  *
+  */
 	$body_class 	= "contract";
 	$title 			= "Contrato";
 	$description 	= "Contrato";
