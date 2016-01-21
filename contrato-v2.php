@@ -28,11 +28,10 @@
 	$og_image		= "img/og/contrato-cdmx.png";
 	$canonical		= $url;
 	include "templates/header.php";?>
-<!-->
+
 <pre>
-	<?php //var_dump($elcontrato->releases[0]->contracts);?>
+	<?php var_dump($elcontrato->releases[0]);?>
 </pre>
-<!-->
 <div class="breadcrumb">
 	<div class="container">
 		<a href="#"><strong>&lt;</strong> SEFIN</a>
@@ -359,24 +358,25 @@
 					<div class="row divider">
 						<div class="col-sm-12">
 							<p class="title_section">Planeación</p>
-							<h1>suficiencia presupuestal 005</h1>
-							<h2>OCDS-87SD3T-SEFIN-30001105-005-2015 <span class="label complete">COMPLETO</span></h2>
+							<h1><?php echo $elcontrato->releases[0]->planning->budget->project;?></h1>
+							<h2><?php echo $elcontrato->releases[0]->tender->id;?></h2>
 						</div>
 					</div>
 					<div class="row divider">
 						<div class="col-sm-6">
-							<p class="title_section">PRESUPUESTO (MXN)</p>
-							<h2 class="amount"><span>$</span>92,000</h2>
+							<p class="title_section">PRESUPUESTO (<?php echo $elcontrato->releases[0]->planning->budget->amount->currency;?>)</p>
+							<h2 class="amount"><span>$</span><?php echo number_format($elcontrato->releases[0]->planning->budget->amount->amount,2,'.',',');?></h2>
 						</div>
 						<div class="col-sm-6">
 							<p class="title_section">Fecha</p>
-							<p>01-01-2015
+							<?php $time_planning = strtotime($elcontrato->releases[0]->date);?>
+							<p><?php echo date('d/m/Y',$time_planning);?> </p>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-4">
 							<p class="title_section">COMPRADOR</p>
-							<p><a href="#">SECRETARÍA DE FINANZAS</a></p>
+							<p><a href="/dependencia.php"><?php echo $elcontrato->releases[0]->tender->procuringEntity->name;?></a></p>
 						</div>
 					</div>
 				</div>
