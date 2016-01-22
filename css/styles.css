@@ -876,6 +876,10 @@ sup {
   margin: 25px 0;
   display: block; }
 
+h2.title_section {
+  font-weight: 700;
+  padding: 70px 0 0; }
+
 /* =Menu 
 -------------------------------------------------------------- */
 nav#menu {

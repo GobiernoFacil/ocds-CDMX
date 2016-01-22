@@ -21,7 +21,7 @@
 	$og_image		= "img/og/contrataciones-abiertas-cdmx.png";
 	$canonical		= $url;
 	include "templates/header.php";?>
-	
+<!--	
 <div class="breadcrumb">
 	<div class="container">
 		<nav class="row">
@@ -58,11 +58,11 @@
 	
 	<div id="treempap"></div>
 </div>
-
+--->
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12">
-			<h3>Contratos</h3>
+			<h2 class="title_section">Lista de licitaciones</h2>
 			<ul class="list">
 	
 				<?php
