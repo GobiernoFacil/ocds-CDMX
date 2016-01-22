@@ -80,7 +80,7 @@
 				?>
 				<li class="row">
 					<div class="col-sm-9 top">
-						<h2><a href="contrato.php"><?php echo $title; ?> <!-- <span>CS-019/2015</span>--></a></h2>
+						<h2><a href="contrato-v2.php?ocid=<?php echo $key; ?>"><?php echo $title; ?> <!-- <span>CS-019/2015</span>--></a></h2>
 					</div>
 					<div class="col-sm-3 amount top">
 						<p><span>$</span> <?php echo number_format($budget); ?> <span>MXN</span></p>

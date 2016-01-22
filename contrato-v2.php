@@ -8,16 +8,17 @@
 	/* UGLY HACK */
 	$d = array_diff(scandir("./js/data"), ['..', '.', '.DS_Store']);
 	$contracts = [];
-	foreach($d as $contract)
-	{
-		$f = file_get_contents("./js/data/" . $contract);
-    	$j = json_decode($f);
+	foreach($d as $contract){
+	  $f = file_get_contents("./js/data/" . $contract);
+    $j = json_decode($f);
 		
-    	$id = $j->releases[0]->ocid;
-    	$contracts[str_replace("/", "-", $id)] = $j;       
-  	}
- 
-  	$elcontrato = $contracts['OCDS-87SD3T-SEFIN-DRM-AD-CC-008-2015'];
+    $id = $j->releases[0]->ocid;
+    $contracts[str_replace("/", "-", $id)] = $j;       
+  }
+  $_ocid_default = "OCDS-87SD3T-SEFIN-DRM-AD-CC-008-2015";
+  $_ocid = isset($_GET['ocid']) ? filter_input(INPUT_GET,'ocid',FILTER_SANITIZE_STRING) : $_ocid_default;
+
+  $elcontrato = array_key_exists($_ocid, $contracts) ? $contracts[$_ocid] : $contracts[$_ocid_default];
   	
   	/*
   	*
