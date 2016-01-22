@@ -65,7 +65,8 @@
 				</li>
 				<?php endif;?>
 				<?php if($elcontrato->releases[0]->awards):?>
-				<li><a href="#" id="btn-award-nav" class="nav_stage" data-title="Adjudicación"><?php echo file_get_contents("img/nav_adjudicacion.svg"); ?></a> 
+				<li><a href="#" id="btn-award-nav" class="nav_stage <?php echo !$elcontrato->releases[0]->contracts ? 'current' : '';?>" data-title="Adjudicación">
+					<?php echo file_get_contents("img/nav_adjudicacion.svg"); ?></a> 
 					<ul id="nav_award">
 						<?php $count_nav = 0;
 							foreach($elcontrato->releases[0]->awards as $award):?>
@@ -79,7 +80,7 @@
 				</li>
 				<?php endif;?>
 				<?php if($elcontrato->releases[0]->planning):?>
-				<li><a href="#" id="btn-tender" class="nav_stage" data-title="Licitación"><?php echo file_get_contents("img/nav_licitacion.svg"); ?></a></li>
+				<li><a href="#" id="btn-tender" class="nav_stage <?php echo (!$elcontrato->releases[0]->contracts || !$elcontrato->releases[0]->awards) ? 'current' : '';?>" data-title="Licitación"><?php echo file_get_contents("img/nav_licitacion.svg"); ?></a></li>
 				<?php endif;?>
 				<?php if($elcontrato->releases[0]->tender):?>
 				<li><a href="#" id="btn-planning"class="nav_stage" data-title="Planeación"><?php echo file_get_contents("img/nav_planeacion.svg"); ?></a></li>
@@ -135,7 +136,7 @@
 								
 							?>
 							
-							<p class="title_section">% GASTADO</p>
+							<p class="title_section">% PRESUPUESTO / GASTADO</p>
 							<div class="percent">
 								<div class="budget" style="width: <?php echo $percent_budget;?>"></div>
 								<div class="spent"  style="width: <?php echo $percent_spent;?>"></div>
@@ -421,12 +422,26 @@ $( document ).ready(function() {
 		btn_tender	  	 = $("#btn-tender");
 	
 	///hide
-	tender.hide();
-	planning.hide();
-	award1.hide();
-	award2.hide();
-	contract2.hide();
-	nav_award.hide();
+	<?php if($elcontrato->releases[0]->contracts):?>
+		tender.hide();
+		planning.hide();
+		award1.hide();
+		award2.hide();
+		contract2.hide();
+		nav_award.hide();
+	<?php endif;?>
+	
+	<?php if(!$elcontrato->releases[0]->contracts):?>
+		<?php if($elcontrato->releases[0]->awards):?>
+			tender.hide();
+			planning.hide();
+		<?php else:?>
+			<?php if($elcontrato->releases[0]->tender):?>
+			planning.hide();
+			<?php endif;?>
+		<?php endif;?>
+	<?php endif;?>
+	
 	
 	
 	function changeClass(element) {
