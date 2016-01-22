@@ -32,7 +32,7 @@
 
 <div class="breadcrumb">
 	<div class="container">
-		<a href="#"><strong>&lt;</strong> SEFIN</a>
+		<a href="/home-v2.php"><strong>&lt;</strong> Lista de Licitaciones</a>
 	</div>
 </div>
 <article>
