@@ -28,6 +28,7 @@
 	$og_image		= "img/og/contrato-cdmx.png";
 	$canonical		= $url;
 	include "templates/header.php";?>
+
 <div class="breadcrumb">
 	<div class="container">
 		<a href="#"><strong>&lt;</strong> SEFIN</a>
