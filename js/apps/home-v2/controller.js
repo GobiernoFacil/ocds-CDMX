@@ -1,5 +1,5 @@
-// PROMÉXICO - STATISTICS
-// @package  : promexico
+// CDMX - STATISTICS
+// @package  : cdmx
 // @location : /js/apps/statistics
 // @file     : companies_controller.js
 // @author   : Gobierno fácil <howdy@gobiernofacil.com>

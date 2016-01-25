@@ -1,5 +1,5 @@
-// PROMÉXICO - STATISTICS
-// @package  : promexico
+// CDMX - STATISTICS
+// @package  : CDMX
 // @location : /js/apps/statistics/views
 // @file     : treemap_view.js
 // @author   : Gobierno fácil <howdy@gobiernofacil.com>
@@ -21,7 +21,7 @@ define(function(require){
   //
       Treemap_layout = {
         width  : 800,
-        height : 400,
+        height : 500,
         top    : 0,
         right  : 0,
         bottom : 0,
@@ -66,7 +66,7 @@ define(function(require){
 	    var max = d3.max(this.data, function(d){
         return d.value;
       });
-      var Blues  = ["#dd1c77", "#c994c7", "#e7e1ef"],
+      var Blues  = ["#eb008b", "#eb008b", "#eb008b"],
           Colors = d3.scale.linear().domain([max,(max/2),1]).range(Blues); 
 
       this.colors = Colors;
@@ -87,7 +87,7 @@ define(function(require){
           .attr("fill", function(d){
             return that.colors(d.value);
           })
-          .attr("stroke", "white")
+          .attr("stroke", "#c1057e")
           .attr("x", function(d){
             return d.x;
           })
@@ -101,24 +101,41 @@ define(function(require){
             return d.dy;
           })
           .on("mouseover", function(d){
-            that.controller.create_tooltip_b({name:d.name, total:d.value});
+            that.controller.create_tooltip_b({name:d.title, total:d.value});
           })
           .on("mouseout", function(d){
             that.controller.remove_tooltip();
           })
           .on("click", function(d){
             console.log(d);
-            window.open(that._url + d.id,"_blank");
+            window.open(that._url + d.id,"_self");
           });
 
       labels.data(this.tree).enter()
         .append("text")
           .attr("class", "label")
-          .attr("x", function (d) {return d.x+5;})
+          .attr("x", function (d) {return d.x+10;})
           .attr("y", function (d) {return d.y+20;})
           .attr("dy", ".35em")
           .text(function(d){
-            return d.title;
+	          /// por ahora
+	          if (d.value >= 421999 && d.value < 15807879.659999998) {
+		          return d.title;
+	          }
+          });
+          
+       labels.data(this.tree).enter()
+        .append("text")
+          .attr("class", "label_amount")
+          .attr("x", function (d) {return d.x+10;})
+          .attr("y", function (d) {return d.y+40;})
+          .attr("dy", ".35em")
+          .text(function(d){
+	          /// por ahora
+	          if (d.value >= 421999 && d.value < 15807879.659999998) {
+		          return "$" + d.value;
+	          }
+            
           });
 
       paths.data(this.tree).enter()
