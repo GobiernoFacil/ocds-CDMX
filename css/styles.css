@@ -258,7 +258,6 @@ input[type="search"]::-webkit-search-decoration {
     height: 8px;
     top: 9px;
     position: absolute;
-    width: 100%;
     z-index: 5; }
 
 .wrapper, .wrap {
@@ -876,6 +875,10 @@ sup {
   padding: 25px 0;
   margin: 25px 0;
   display: block; }
+
+h2.title_section {
+  font-weight: 700;
+  padding: 70px 0 0; }
 
 /* =Menu 
 -------------------------------------------------------------- */
@@ -1838,7 +1841,7 @@ a.btn {
   .label.complete {
     background: #28c3f9; }
 
-b.budget {
+b.spent {
   background: #0a467c;
   display: inline-block;
   height: 8px;
@@ -1846,7 +1849,7 @@ b.budget {
   vertical-align: middle;
   width: 15px; }
 
-b.spent {
+b.budget {
   background: #28c3f9;
   display: inline-block;
   height: 26px;

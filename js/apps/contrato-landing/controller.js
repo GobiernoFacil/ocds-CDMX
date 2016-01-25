@@ -20,6 +20,12 @@ define(function(require){
       ContractView    = require("views/contract_nav_view"),
       TenderView      = require("views/tender_view"),
   //
+  // LOAD THE AVALIABLE CONTRACTS x_______x
+  // --------------------------------------------------------------------------------
+  //
+  C1 = require("../../data/OCDS-87SD3T-SEFIN-DRM-A-015-2015.json"),
+
+  //
   // D E F I N E   T H E   S E T U P   V A R I A B L E S
   // --------------------------------------------------------------------------------
   //
@@ -59,6 +65,7 @@ define(function(require){
     //
 
     initialize : function(){
+      console.log(C1);
       var that = this;
       d3.json("/js/data/OCDS-87SD3T-SEFIN-DRM-AD-CC-008-2015.json", function(error, data){
         that.data = data;
