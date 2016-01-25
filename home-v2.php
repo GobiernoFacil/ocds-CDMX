@@ -7,9 +7,26 @@
   	$f = file_get_contents("./js/data/" . $contract);
     $j = json_decode($f);
 
-    $id = $j->releases[0]->ocid;
-    $contracts[str_replace("/", "-", $id)] = $j;
+    if($j){
+      $id = $j->releases[0]->ocid;
+      $contracts[str_replace("/", "-", $id)] = $j;
+    }
   }
+
+  $contract_data = [];
+  foreach ($contracts as $key => $value) {
+  	$contract_data[] = [
+  	"title"                 => $value->releases[0]->planning->budget->project,
+	  "budget"                => $value->releases[0]->planning->budget->amount->amount,
+		"buyer"                 => $value->releases[0]->buyer,
+	  "awards"                => $value->releases[0]->awards,
+		"contracts"             => $value->releases[0]->contracts
+		];
+  }
+
+  $total_money = array_reduce($contract_data,function($v1, $v2){
+  	return $v1 + (float)$v2["budget"];
+  },0);
 	?>
 
 
@@ -19,9 +36,9 @@
 	$title 			= "Contrataciones Abiertas de la Ciudad de México";
 	$description 	= "Contrataciones Abiertas de la Ciudad de México";
 	$og_image		= "img/og/contrataciones-abiertas-cdmx.png";
-	$canonical		= $url;
+	// $canonical		= $url;
 	include "templates/header.php";?>
-<!--	
+
 <div class="breadcrumb">
 	<div class="container">
 		<nav class="row">
@@ -46,10 +63,10 @@
 			<p><span>DEPENDENCIA</span>SEFIN</p>
 		</div>
 		<div class="col-sm-4 center">
-			<p><span>CONTRATOS POR DEPENDENCIA</span> <strong>10</strong></p>
+			<p><span>CONTRATOS POR DEPENDENCIA</span> <strong><?php echo count($contracts); ?></strong></p>
 		</div>
 		<div class="col-sm-4">
-			<p><span>TOTAL (MXN)</span>$<strong>267</strong> millones </p>
+			<p><span>TOTAL (MXN)</span>$<strong><?php echo (int)($total_money/1000000); ?></strong> millones </p>
 		</div>
 	</header>
 	<p id="publisher-name"></p>
@@ -58,7 +75,7 @@
 	
 	<div id="treempap"></div>
 </div>
---->
+
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12">
@@ -155,5 +172,10 @@
 		</div>
 	</div>
 </div>
+
+<script>
+	var DATA = <?php echo json_encode($contract_data); ?>;
+</script>
+<script data-main="/js/apps/home-v2/main" src="js/bower_components/requirejs/require.js"></script>
 
 <?php include "templates/footer.php";?>
