@@ -1,5 +1,5 @@
-// CDMX - HOME-V2
-// date     : 30/12/2015
+// CDMX - CONTRATO-HOME
+// date     : 25/01/2016
 // @package : cdmx
 // @file    : main.js
 // @version : 1.0.0
@@ -7,24 +7,19 @@
 // @url     : http://gobiernofacil.com
 
 require.config({
-  baseUrl : "js/apps/home-v2",
+  baseUrl : "/js/apps/home-v2",
   paths : {
-    d3          : "../../bower_components/d3/d3",
-    jquery      : "../../bower_components/jquery/dist/jquery.min",
-    backbone    : "../../bower_components/backbone/backbone",
-    underscore  : "../../bower_components/underscore/underscore-min",
-    text        : "../../bower_components/requirejs-text/text",
-    TimelineMax : "../../bower_components/gsap/src/minified/TimelineMax.min",
-    TweenLite   : "../../bower_components/gsap/src/minified/TweenLite.min",
-    TweenMax    : "../../bower_components/gsap/src/minified/TweenMax.min",
-    ScrollToPlugin : "../../bower_components/gsap/src/minified/plugins/ScrollToPlugin.min",
+    jquery     : "../../bower_components/jquery/dist/jquery.min",
+    backbone   : "../../bower_components/backbone/backbone",
+    underscore : "../../bower_components/underscore/underscore-min",
+    text       : "../../bower_components/requirejs-text/text",
+    d3         : "../../bower_components/d3/d3"
   },
   shim : {
     backbone : {
       deps    : ["jquery", "underscore"],
       exports : "Backbone"
-    },
-    "ScrollMagic.animation.gsap" : ["ScrollMagic"]
+    }
   }
 });
 
