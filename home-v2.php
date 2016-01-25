@@ -16,11 +16,12 @@
   $contract_data = [];
   foreach ($contracts as $key => $value) {
   	$contract_data[] = [
-  	"title"                 => $value->releases[0]->planning->budget->project,
-	  "budget"                => $value->releases[0]->planning->budget->amount->amount,
-		"buyer"                 => $value->releases[0]->buyer,
-	  "awards"                => $value->releases[0]->awards,
-		"contracts"             => $value->releases[0]->contracts
+  	"id"        => $key,
+  	"title"     => $value->releases[0]->planning->budget->project,
+	  "budget"    => $value->releases[0]->planning->budget->amount->amount,
+		"buyer"     => $value->releases[0]->buyer,
+	  "awards"    => $value->releases[0]->awards,
+		"contracts" => $value->releases[0]->contracts
 		];
   }
 
@@ -73,7 +74,7 @@
 	<p id="contratos-total-num"></p>
 	<p id="contratos-total-money"></p>
 	
-	<div id="treempap"></div>
+	<div id="treemap"></div>
 </div>
 
 <div class="container">
