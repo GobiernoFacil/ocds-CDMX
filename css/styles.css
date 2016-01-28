@@ -1801,6 +1801,32 @@ ul.timeline {
       ul.timeline .nav_stage.current svg path {
         fill: white; }
 
+/* Dataviz 
+-------------------------------------------------------------- */
+#treemap {
+  padding: 60px 0 80px; }
+  #treemap svg {
+    margin: 40px auto 0;
+    width: 800px;
+    display: block;
+    cursor: pointer; }
+    #treemap svg rect {
+      stroke-width: 2px; }
+    #treemap svg text {
+      fill: rgba(255, 255, 255, 0.6); }
+      #treemap svg text.label_amount {
+        fill: white;
+        font-size: 20px; }
+
+.tooltip-container {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: block;
+  padding: 10px; }
+  .tooltip-container p {
+    margin: 0;
+    font-size: 14px; }
+
 /* =BTN 
 -------------------------------------------------------------- */
 a.btn {

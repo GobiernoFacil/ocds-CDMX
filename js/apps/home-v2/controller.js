@@ -1,5 +1,5 @@
-// PROMÉXICO - STATISTICS
-// @package  : promexico
+// CDMX - STATISTICS
+// @package  : cdmx
 // @location : /js/apps/statistics
 // @file     : companies_controller.js
 // @author   : Gobierno fácil <howdy@gobiernofacil.com>
@@ -62,13 +62,12 @@ define(function(require){
     
 
       // BY EMPLOYEES
-      var employees_data = this.set_employees_data();
-      this.employees_graph = new Treemap({
+      this.treemap = new Treemap({
         controller : this,
-        data       : employees_data,
-        el         : "#companies-by-employes",
-        _url       : "/promexico/estadisticas/lista/numero-de-empleados/",
-        _selector  : "employes_num"
+        data       : DATA,
+        el         : "#treemap",
+        _url       : "/contrato-v2.php?ocid=",
+        _selector  : "budget"
       });
     },
   

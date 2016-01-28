@@ -16,11 +16,12 @@
   $contract_data = [];
   foreach ($contracts as $key => $value) {
   	$contract_data[] = [
-  	"title"                 => $value->releases[0]->planning->budget->project,
-	  "budget"                => $value->releases[0]->planning->budget->amount->amount,
-		"buyer"                 => $value->releases[0]->buyer,
-	  "awards"                => $value->releases[0]->awards,
-		"contracts"             => $value->releases[0]->contracts
+  	"id"        => $key,
+  	"title"     => $value->releases[0]->planning->budget->project,
+	  "budget"    => $value->releases[0]->planning->budget->amount->amount,
+		"buyer"     => $value->releases[0]->buyer,
+	  "awards"    => $value->releases[0]->awards,
+		"contracts" => $value->releases[0]->contracts
 		];
   }
 
@@ -43,11 +44,11 @@
 	<div class="container">
 		<nav class="row">
 			<div class="col-sm-5">
-			Contratos
+			<!--Contratos-->
 			</div>
 			<div class="col-sm-7 right">
-				<a href="#" class="advanced_search">Advanced Search</a>
-				<a href="#" id="dependencia-a" class="ladependencia empresa">Proveedores</a>
+			<!--	<a href="#" class="advanced_search">Advanced Search</a>
+				<a href="#" id="dependencia-a" class="ladependencia empresa">Proveedores</a>-->
 				<a href="#" id="dependencia-a" class="ladependencia live">Dependencia</a>
 			</div>
 		</nav>
@@ -63,7 +64,7 @@
 			<p><span>DEPENDENCIA</span>SEFIN</p>
 		</div>
 		<div class="col-sm-4 center">
-			<p><span>CONTRATOS POR DEPENDENCIA</span> <strong><?php echo count($contracts); ?></strong></p>
+			<p><span>LICITACIONES POR DEPENDENCIA</span> <strong><?php echo count($contracts); ?></strong></p>
 		</div>
 		<div class="col-sm-4">
 			<p><span>TOTAL (MXN)</span>$<strong><?php echo (int)($total_money/1000000); ?></strong> millones </p>
@@ -73,7 +74,7 @@
 	<p id="contratos-total-num"></p>
 	<p id="contratos-total-money"></p>
 	
-	<div id="treempap"></div>
+	<div id="treemap"></div>
 </div>
 
 <div class="container">
