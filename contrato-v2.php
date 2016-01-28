@@ -6,10 +6,10 @@
 
 	date_default_timezone_set('America/Mexico_City');
 	/* UGLY HACK */
-	$d = array_diff(scandir("./js/data"), ['..', '.', '.DS_Store']);
+	$d = array_diff(scandir("./js/newdata"), ['..', '.', '.DS_Store']);
 	$contracts = [];
 	foreach($d as $contract){
-	  $f = file_get_contents("./js/data/" . $contract);
+	  $f = file_get_contents("./js/newdata/" . $contract);
     $j = json_decode($f);
 		
     $id = $j->releases[0]->ocid;
