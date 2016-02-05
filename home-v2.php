@@ -96,7 +96,7 @@
 				    $first_contract_status = empty($contracts) ? null : $contracts[0]->status;
 				    $first_contract_time = empty($contracts) ? null : strtotime($contracts[0]->period->startDate);
 				?>
-				<li class="row">
+				<li class="row tender planning <?php echo empty($awards) ? '' : 'award'; ?> <?php echo empty($contracts) ? '' : 'contract'; ?>">
 					<div class="col-sm-9 top">
 						<h2><a href="contrato-v2.php?ocid=<?php echo $key; ?>"><?php echo $title; ?> <!-- <span>CS-019/2015</span>--></a></h2>
 					</div>
@@ -173,6 +173,18 @@
 		</div>
 	</div>
 </div>
+
+<form>
+	<p>
+	  <select>
+	    <option value="all">all</option>
+		  <option value="planning">planning</option>
+		  <option value="tender">tender</option>
+		  <option value="award">award</option>
+		  <option value="contract">contract</option>
+	  </select>
+	</p>
+</form>
 
 <script>
 	var DATA = <?php echo json_encode($contract_data); ?>;

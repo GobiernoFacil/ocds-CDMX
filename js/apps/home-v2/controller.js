@@ -39,7 +39,7 @@ define(function(require){
     // [ DEFINE THE EVENTS ]
     //
     events :{
-
+      "change form select" : "update_list"
     },
 
     //
@@ -137,6 +137,17 @@ define(function(require){
     remove_tooltip : function(){
       $(".tooltip-container").remove();
     },
+
+    update_list : function(e){
+      var option = e.currentTarget.value;
+      if(option == "all"){
+        $("li.row").show();
+      }
+      else{
+        $("li.row").hide();
+        $("li." + option).show();
+      }
+    }
 
   });
 
