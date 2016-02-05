@@ -142,10 +142,28 @@ define(function(require){
       var option = e.currentTarget.value;
       if(option == "all"){
         $("li.row").show();
+        $("h2#title_select_type").html("Lista de <strong>Contrataciones Abiertas</strong>");
       }
       else{
+	      switch(option) {
+		      case "planning":
+		      var name_option = "Lista de contrataciones en <strong>Planeación</strong>";
+		      break;
+		      case "tender":
+		      var name_option = "Lista de contrataciones en <strong>Licitación</strong>";
+		      break;
+			  case "award":
+		      var name_option = "Lista de contrataciones en <strong>Adjudicación</strong>";
+		      break;
+		      case "contract":
+		      var name_option = "Lista de <strong>Contratos</strong>";
+		      break;
+		      default:
+		      var name_option = "";
+	      }
         $("li.row").hide();
         $("li." + option).show();
+        $("h2#title_select_type").html(name_option);
       }
     }
 

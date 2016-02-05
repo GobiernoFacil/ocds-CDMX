@@ -260,6 +260,9 @@ input[type="search"]::-webkit-search-decoration {
     position: absolute;
     z-index: 5; }
 
+.select_type {
+  margin-top: 70px; }
+
 .wrapper, .wrap {
   width: 90%;
   margin: 0 auto; }
@@ -879,6 +882,8 @@ sup {
 h2.title_section {
   font-weight: 700;
   padding: 70px 0 0; }
+  h2.title_section.select {
+    font-weight: 500; }
 
 /* =Menu 
 -------------------------------------------------------------- */
@@ -1474,6 +1479,12 @@ div.forthewin {
       border-bottom: 1px dotted #eb008b; }
       .list p a:hover {
         color: #eb008b; }
+    .list p.description {
+      font-size: 13px;
+      margin-top: 5px; }
+      .list p.description span {
+        color: #ccc;
+        text-transform: uppercase; }
   .list h2 {
     font-size: 21px; }
     .list h2 span {
